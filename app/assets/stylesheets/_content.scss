@@ -1,0 +1,43 @@
+/**
+ * content.scss - Main content
+ *
+ * Florian Dejonckheere <florian@floriandejonckheere.be>
+ *
+ */
+
+.main {
+  .section {
+    margin-bottom: 10rem;
+
+    padding: 5rem 30%;
+
+    max-width: 800px;
+
+    &:nth-child(2n) {
+      background-color: $color-section;
+    }
+  }
+}
+
+.showcase {
+  margin: 4rem auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .showcase-icon {
+    width: 250px;
+
+    font-size: 1.5em;
+
+    color: $color-subtitle;
+
+    .fa {
+      font-size: 3em;
+      display: block;
+
+      margin-bottom: 1rem;
+    }
+  }
+}
