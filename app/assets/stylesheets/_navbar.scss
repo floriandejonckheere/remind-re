@@ -1,0 +1,32 @@
+/**
+ * navbar.scss - Navbar
+ *
+ * Florian Dejonckheere <florian@floriandejonckheere.be>
+ *
+ */
+
+.navbar {
+  padding: 3rem 2rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+
+  .navbar-brand {
+    display: inline-block;
+
+    align-self: flex-start;
+  }
+
+  .navbar-nav {
+    display: inline-block;
+
+    align-self: flex-end;
+
+    .navbar-item {
+      display: inline-block;
+      padding: 0 1rem;
+    }
+  }
+}

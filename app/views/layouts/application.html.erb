@@ -6,8 +6,15 @@
 
     <%= javascript_pack_tag 'remindre' %>
     <%= stylesheet_pack_tag 'remindre' %>
+
+    <%= javascript_tag 'application' %>
+    <%= stylesheet_link_tag 'application' %>
+
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:400,700" rel="stylesheet">
   </head>
   <body>
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

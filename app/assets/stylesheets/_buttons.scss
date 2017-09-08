@@ -1,0 +1,28 @@
+/**
+ * buttons.scss - Buttons
+ *
+ * Florian Dejonckheere <florian@floriandejonckheere.be>
+ *
+ */
+
+.btn {
+  padding: 1.2rem 2rem;
+
+  background-color: $color-primary;
+  color: white;
+
+  border-radius: $border-radius;
+
+  &:visited {
+    color: white;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: lighten($color-primary, 3%);
+
+    color: white;
+    text-decoration: none;
+  }
+}
