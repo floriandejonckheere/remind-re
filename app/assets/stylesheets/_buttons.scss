@@ -25,4 +25,15 @@
     color: white;
     text-decoration: none;
   }
+
+  &.btn-inverse {
+    background-color: white;
+    color: $color-primary;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $color-section;
+    }
+  }
 }
