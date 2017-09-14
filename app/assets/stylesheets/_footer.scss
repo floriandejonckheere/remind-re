@@ -15,6 +15,10 @@
   color: lighten(black, 60%);
   font-size: .9em;
 
+  @include mobile {
+    font-size: 2em;
+  }
+
   .footer-wrapper {
     padding: 3rem 5rem;
 
@@ -23,19 +27,32 @@
     justify-content: space-around;
     flex-wrap: nowrap;
 
+    border-top: 1px solid $color-section;
+
     width: 40%;
 
-    border-top: 1px solid $color-section;
+    @include mobile {
+      flex-direction: column;
+
+      width: 100%;
+    }
   }
 
   .footer-block {
     position: relative;
 
+    padding: 0 3rem;
+    margin-bottom: 2rem;
+
     width: 200px;
 
-    padding: 0 3rem;
-
     flex: 1;
+
+    @include mobile {
+      padding: 0 5rem;
+
+      width: 300px;
+    }
 
     &.footer-block-2x {
       flex: 2;
@@ -68,7 +85,9 @@
   .footer-icons {
     margin-top: 1rem;
 
-    position: absolute;
-    bottom: 0;
+    @include desktop {
+      position: absolute;
+      bottom: 0;
+    }
   }
 }

@@ -7,7 +7,9 @@
 
 .main {
   .section {
-    margin-bottom: 10rem;
+    &:not(:last-child) {
+      margin-bottom: 10rem;
+    }
 
     &:nth-child(2n) {
       background-color: $color-section;
