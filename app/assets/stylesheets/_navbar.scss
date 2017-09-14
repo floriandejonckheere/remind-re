@@ -13,16 +13,32 @@
   justify-content: space-around;
   flex-wrap: nowrap;
 
+  @include mobile {
+    flex-direction: column;
+
+    font-size: 2em;
+  }
+
   .navbar-brand {
     display: inline-block;
 
     align-self: flex-start;
+
+    @include mobile {
+      align-self: center;
+
+      margin: 2rem auto;
+    }
   }
 
   .navbar-nav {
     display: inline-block;
 
     align-self: flex-end;
+
+    @include mobile {
+      align-self: center;
+    }
 
     .navbar-item {
       display: inline-block;
