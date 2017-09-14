@@ -9,12 +9,16 @@
   .section {
     margin-bottom: 10rem;
 
-    padding: 5rem 30%;
-
-    max-width: 800px;
-
     &:nth-child(2n) {
       background-color: $color-section;
+    }
+
+    @include mobile {
+      padding: 5rem 3rem;
+    }
+
+    @include desktop {
+      padding: 5rem 25%;
     }
   }
 }
@@ -23,21 +27,36 @@
   margin: 4rem auto;
 
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
 
+  @include mobile {
+    flex-direction: column;
+  }
+
   .showcase-icon {
-    width: 250px;
-
-    font-size: 1.5em;
-
     color: $color-subtitle;
 
+    @include mobile {
+      width: 100%;
+
+      margin-bottom: 3rem;
+    }
+
     .fa {
-      font-size: 3em;
+      font-size: 5em;
       display: block;
 
       margin-bottom: 1rem;
+    }
+  }
+
+  .showcase-text {
+    font-size: 1.5em;
+
+    @include mobile {
+      font-size: 2em;
     }
   }
 }
