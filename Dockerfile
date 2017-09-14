@@ -16,6 +16,11 @@ RUN gem install bundler
 
 RUN bundle install --deployment --without development test
 
+# Install Node dependencies
+ADD package.json /app/
+RUN npm install yarn
+RUN yarn
+
 # Add application
 ADD . /app/
 
