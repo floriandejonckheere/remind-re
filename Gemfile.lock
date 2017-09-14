@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/nulldb/nulldb.git
+  revision: 6c097e39caf429845a457cca6be2a9af1a4e1356
+  specs:
+    activerecord-nulldb-adapter (0.3.7)
+      activerecord (>= 2.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -168,6 +175,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord-nulldb-adapter!
   byebug
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
