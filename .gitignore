@@ -13,13 +13,10 @@
 !/log/.keep
 !/tmp/.keep
 
-/node_modules
-/yarn-error.log
+node_modules
+yarn-error.log
 
 .byebug_history
-/public/packs
-/public/packs-test
-/node_modules
 
 # IDE files
 .idea
