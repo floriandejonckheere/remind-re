@@ -34,9 +34,6 @@ end
 group :development do
   # RuboCop
   gem 'rubocop'
-
-  # Foreman
-  gem 'foreman'
 end
 
 group :production do

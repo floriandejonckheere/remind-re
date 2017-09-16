@@ -22,3 +22,12 @@ $ bundle install
 $ # Front-end dependencies (based in `web` folder)
 $ cd web && yarn install
 ```
+
+## Development
+
+Start both the Rails server and the Webpack server:
+
+```
+$ bundle exec rails server
+$ cd web; yarn run start
+```
