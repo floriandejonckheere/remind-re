@@ -13,6 +13,7 @@ class Header extends Component {
 
           <div className="uk-navbar-right">
             <ul className="uk-iconnav">
+              <li><a className="uk-button" uk-toggle="target: #sidebar">sidebar</a></li>
               <li><a href="#" className="uk-button uk-icon" uk-icon="icon: grid">grid</a></li>
               <li><a href="#" className="uk-button uk-icon" uk-icon="icon: list">list</a></li>
               <li><a href="#" className="uk-button uk-icon" uk-icon="icon: sign out">sign out</a></li>

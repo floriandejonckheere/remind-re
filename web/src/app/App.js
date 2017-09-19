@@ -11,14 +11,17 @@ class App extends Component {
     return (
       <div className="App">
         <Sidebar />
-        <Header />
 
-        <div className="uk-grid uk-grid-collapse">
-          <div className="uk-width-expand">
-            <Reminders />
-          </div>
-          <div className="uk-width-1-6">
-            <Calendar />
+        <div className="uk-offcanvas-content">
+          <Header />
+
+          <div className="uk-grid uk-grid-collapse">
+            <div className="uk-width-expand">
+              <Reminders />
+            </div>
+            <div className="uk-width-1-6">
+              <Calendar />
+            </div>
           </div>
         </div>
       </div>
