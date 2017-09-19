@@ -12,7 +12,7 @@ class Header extends Component {
           </div>
 
           <div className="uk-navbar-right">
-            <ul class="uk-iconnav">
+            <ul className="uk-iconnav">
               <li><a href="#" className="uk-button uk-icon" uk-icon="icon: grid">grid</a></li>
               <li><a href="#" className="uk-button uk-icon" uk-icon="icon: list">list</a></li>
               <li><a href="#" className="uk-button uk-icon" uk-icon="icon: sign out">sign out</a></li>
