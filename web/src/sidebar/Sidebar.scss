@@ -1,3 +1,7 @@
+@import '../shared/variables.scss';
+
 .Sidebar {
-  background: yellow;
+  background: $color-sidebar;
+
+  height: 100vh;
 }

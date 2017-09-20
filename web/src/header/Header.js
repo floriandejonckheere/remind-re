@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Icons from 'react-uikit-icons'
 
 import './Header.scss'
 
@@ -13,10 +14,9 @@ class Header extends Component {
 
           <div className="uk-navbar-right">
             <ul className="uk-iconnav">
-              <li><a className="uk-button" uk-toggle="target: #sidebar">sidebar</a></li>
-              <li><a href="#" className="uk-button uk-icon" uk-icon="icon: grid">grid</a></li>
-              <li><a href="#" className="uk-button uk-icon" uk-icon="icon: list">list</a></li>
-              <li><a href="#" className="uk-button uk-icon" uk-icon="icon: sign out">sign out</a></li>
+              <li><a href="#" className="uk-button" data-uk-icon="icon: grid">grid</a></li>
+              <li><a href="#" className="uk-button" data-uk-icon="icon: list">list</a></li>
+              <li><a href="#" className="uk-button" data-uk-icon="icon: sign out">sign out</a></li>
             </ul>
           </div>
         </nav>

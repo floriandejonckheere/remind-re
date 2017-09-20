@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import 'uikit/dist/js/uikit'
+import 'uikit/dist/js/uikit-icons'
 
 import 'typeface-montserrat'
 
