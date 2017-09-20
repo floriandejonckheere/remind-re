@@ -13,6 +13,7 @@
  */
 $global-link-color: $color-primary;
 $global-primary-background: $color-primary;
+$global-font-family: Montserrat, Roboto, sans-serif;
 
 @import 'uikit/src/scss/variables-theme.scss';
 @import 'uikit/src/scss/mixins-theme.scss';
@@ -21,8 +22,9 @@ $global-primary-background: $color-primary;
 /**
  * Global styles
  */
+html,
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: Montserrat, sans-serif;
 }

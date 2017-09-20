@@ -49,6 +49,7 @@
     "react-router-dom": "^4.2.2",
     "style-loader": "0.18.2",
     "sw-precache-webpack-plugin": "0.11.4",
+    "typeface-montserrat": "^0.0.37",
     "uikit": "^3.0.0-beta.30",
     "url-loader": "0.5.9",
     "webpack": "3.5.1",
