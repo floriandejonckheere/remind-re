@@ -6,15 +6,12 @@ class Sidebar extends Component {
   render() {
     return (
       <div className="Sidebar uk-padding">
-        SIDEBAR
-        {/*<nav className="uk-nav uk-nav-default uk-iconnav">*/}
-          {/*<div className="uk-nav-item uk-navbar-left">*/}
-            {/*<a href="#" className="uk-button" data-uk-icon="icon: user">profile</a>*/}
-          {/*</div>*/}
-          {/*<div className="uk-nav-item uk-navbar-right">*/}
-            {/*<a href="#" className="uk-button" data-uk-icon="icon: cog">settings</a>*/}
-          {/*</div>*/}
-        {/*</nav>*/}
+        <ul className="uk-nav uk-nav-default">
+          <li className="uk-margin uk-active"><a href="#">today</a></li>
+          <li className="uk-margin"><a href="#">tomorrow</a></li>
+          <li className="uk-margin"><a href="#">this week</a></li>
+          <li className="uk-margin uk-margin-large-top"><a href="#">settings</a></li>
+        </ul>
       </div>
     )
   }
