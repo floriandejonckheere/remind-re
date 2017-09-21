@@ -12,7 +12,7 @@ class App extends Component {
       <div className="App">
         <Header />
 
-        <div className="uk-grid uk-flex-center uk-grid-collapse">
+        <div className="Content uk-grid uk-flex-center uk-grid-collapse">
           <div className="uk-width-1-6@l">
             <Sidebar />
           </div>
