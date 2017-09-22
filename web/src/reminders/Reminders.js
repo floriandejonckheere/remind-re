@@ -16,6 +16,13 @@ class Reminders extends Component {
               subtitle="Tomorrow evening"
             />
           </li>
+          <li className="uk-padding-small">
+            <Reminder
+              title="Take out trash"
+              subtitle="Wednesday at 8:00"
+              recurring="true"
+            />
+          </li>
         </ul>
       </div>
     )
