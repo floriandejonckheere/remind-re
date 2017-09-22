@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 
 import './Header.css'
 
+import logo from './logo.svg'
+
 class Header extends Component {
   render() {
     return (
@@ -9,15 +11,17 @@ class Header extends Component {
         <div className="uk-grid uk-flex-center">
           <div className="uk-width-1-2@l">
             <nav className="uk-navbar ">
-              <div className="uk-navbar-item">
-                <a href="/" className="uk-logo">LOGO</a>
+              <div className="uk-navbar-item re-navbar-item">
+                <a href="/" className="uk-logo">
+                  <img src={logo} alt="logo" className="re-logo"/>
+                </a>
               </div>
-              <div className="uk-navbar-item uk-width-expand">
-                <input type="text" className="uk-input" placeholder="Add new reminder..." />
+              <div className="uk-navbar-item re-navbar-item uk-width-expand">
+                <input type="text" className="uk-input" placeholder="Quick search" />
               </div>
-              <div className="uk-navbar-item uk-navbar-right">
+              <div className="uk-navbar-item re-navbar-item uk-navbar-right">
                 <ul className="uk-iconnav">
-                  <li><a href="#" className="uk-button" data-uk-icon="icon: check" /></li>
+                  <li><a href="#" className="uk-button" data-uk-icon="icon: plus" /></li>
                   <li><a href="#" className="uk-button" data-uk-icon="icon: cog" /></li>
                   <li><a href="#" className="uk-button" data-uk-icon="icon: sign-out" /></li>
                 </ul>
