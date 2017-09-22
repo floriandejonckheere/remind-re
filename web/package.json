@@ -46,7 +46,9 @@
     "react": "^16.0.0-rc.3",
     "react-dev-utils": "^4.0.1",
     "react-dom": "^16.0.0-rc.3",
+    "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
     "style-loader": "0.18.2",
     "sw-precache-webpack-plugin": "0.11.4",
     "typeface-montserrat": "^0.0.37",
@@ -58,6 +60,7 @@
     "whatwg-fetch": "2.0.3"
   },
   "devDependencies": {
+    "redux-devtools": "^3.4.0",
     "yarn": "^1.0.2"
   },
   "scripts": {
