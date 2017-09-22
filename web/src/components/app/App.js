@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import './App.css'
 
-import Sidebar from 'sidebar/Sidebar'
-import Header from 'header/Header'
-import Reminders from 'reminders/Reminders'
+import Sidebar from 'components/sidebar/Sidebar'
+import Header from 'components/header/Header'
+import Reminders from 'components/reminders/Reminders'
 
 class App extends Component {
   render() {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import Reminder from 'reminder/Reminder'
+import Reminder from 'components/reminder/Reminder'
 
 import './Reminders.css'
 
@@ -14,6 +14,7 @@ class Reminders extends Component {
             <Reminder
               title="Hand in assigment 1"
               subtitle="Tomorrow evening"
+              date=""
             />
           </li>
           <li className="uk-padding-small">

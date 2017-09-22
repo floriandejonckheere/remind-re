@@ -8,7 +8,6 @@ import 'typeface-montserrat'
 
 import registerServiceWorker from './registerServiceWorker'
 
-
 import './index.css'
 import AppRouter from './AppRouter'
 
