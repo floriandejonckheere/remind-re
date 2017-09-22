@@ -2,14 +2,14 @@ import React, { Component } from 'react'
 
 import Reminder from 'components/reminder/Reminder'
 
-import './Reminders.css'
+import './ReminderList.css'
 
-class Reminders extends Component {
+class ReminderList extends Component {
   render() {
     return (
-      <div className="Reminders uk-padding" uk-height-viewport="expand: true">
+      <div className="Reminders uk-padding" data-uk-height-viewport="expand: true">
         <strong>Today</strong>
-        <ul className="uk-list">
+        <ul className="uk-list uk-list-divider">
           <li className="uk-padding-small">
             <Reminder
               title="Hand in assigment 1"
@@ -30,4 +30,4 @@ class Reminders extends Component {
   }
 }
 
-export default Reminders
+export default ReminderList

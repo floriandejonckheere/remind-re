@@ -10,9 +10,16 @@ class Reminder extends Component {
   render() {
     return (
       <div className="Reminder uk-grid">
+        <div className="uk-flex uk-flex-middle">
+          <input type="checkbox" className="uk-checkbox" />
+        </div>
         <div className="uk-width-expand">
           <div className="uk-text-lead">
-            { this.props.title }
+            { this.props.active ? (
+              <s>{ this.props.title }</s>
+            ) : (
+              <span>{ this.props.title }</span>
+            )}
             { this.props.recurring &&
               <span className="uk-margin-left uk-text-muted" title="Recurring reminder" data-uk-icon="icon: future; ratio: .8" data-uk-tooltip />
             }

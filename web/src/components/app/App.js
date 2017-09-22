@@ -3,7 +3,7 @@ import './App.css'
 
 import Sidebar from 'components/sidebar/Sidebar'
 import Header from 'components/header/Header'
-import Reminders from 'components/reminders/Reminders'
+import ReminderList from 'components/reminderlist/ReminderList'
 
 class App extends Component {
   render() {
@@ -16,7 +16,7 @@ class App extends Component {
             <Sidebar />
           </div>
           <div className="uk-width-1-3@l">
-            <Reminders />
+            <ReminderList />
           </div>
         </div>
       </div>
