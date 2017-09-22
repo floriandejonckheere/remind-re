@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import Reminder from '../reminder/Reminder'
+
 import './Reminders.css'
 
 class Reminders extends Component {
@@ -9,16 +11,10 @@ class Reminders extends Component {
         <strong>Today</strong>
         <ul className="uk-list">
           <li className="uk-padding-small">
-            <div className="uk-text-lead">Hand in assignment 1</div>
-            <p className="uk-text-meta">Tomorrow evening</p>
-          </li>
-          <li className="uk-padding-small">
-            <div className="uk-text-lead">Hand in assignment 1</div>
-            <p className="uk-text-meta">Tomorrow evening</p>
-          </li>
-          <li className="uk-padding-small">
-            <div className="uk-text-lead">Hand in assignment 1</div>
-            <p className="uk-text-meta">Tomorrow evening</p>
+            <Reminder
+              title="Hand in assigment 1"
+              subtitle="Tomorrow evening"
+            />
           </li>
         </ul>
       </div>
