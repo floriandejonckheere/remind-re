@@ -15,10 +15,10 @@ class Reminder extends Component {
         </div>
         <div className="uk-width-expand">
           <div className="uk-text-lead">
-            { this.props.active ? (
-              <s>{ this.props.title }</s>
-            ) : (
-              <span>{ this.props.title }</span>
+            { this.props.active ?
+              this.props.title
+            : (
+              <s className="uk-text-muted">{ this.props.title }</s>
             )}
             { this.props.recurring &&
               <span className="uk-margin-left uk-text-muted" title="Recurring reminder" data-uk-icon="icon: future; ratio: .8" data-uk-tooltip />

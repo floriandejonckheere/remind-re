@@ -15,6 +15,7 @@ class ReminderList extends Component {
               title="Hand in assigment 1"
               subtitle="Tomorrow evening"
               date=""
+              active="true"
             />
           </li>
           <li className="uk-padding-small">
