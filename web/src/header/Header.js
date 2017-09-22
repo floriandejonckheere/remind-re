@@ -17,7 +17,7 @@ class Header extends Component {
                 </a>
               </div>
               <div className="uk-navbar-item re-navbar-item uk-width-expand">
-                <input type="text" className="uk-input" placeholder="Quick search" />
+                <input type="text" className="uk-input re-navbar-search" placeholder="Quick search" />
               </div>
               <div className="uk-navbar-item re-navbar-item uk-navbar-right">
                 <ul className="uk-iconnav">

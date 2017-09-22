@@ -4,7 +4,6 @@ import './App.css'
 import Sidebar from '../sidebar/Sidebar'
 import Header from '../header/Header'
 import Reminders from '../reminders/Reminders'
-import Calendar from '../calendar/Calendar'
 
 class App extends Component {
   render() {
