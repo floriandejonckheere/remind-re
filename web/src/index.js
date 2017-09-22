@@ -9,7 +9,9 @@ import 'typeface-montserrat'
 import registerServiceWorker from './registerServiceWorker'
 
 import './index.css'
-import AppRouter from './AppRouter'
+
+import 'store'
+import AppRouter from 'AppRouter'
 
 // Active icons plugin
 window.UIkit = UIkit
