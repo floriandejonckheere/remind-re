@@ -7,7 +7,7 @@ import './ReminderList.css'
 class ReminderList extends Component {
   render() {
     return (
-      <div className="Reminders uk-padding" data-uk-height-viewport="expand: true">
+      <div className="ReminderList uk-padding" data-uk-height-viewport="expand: true">
         <strong>Today</strong>
         <ul className="uk-list uk-list-divider">
           <li className="uk-padding-small">
