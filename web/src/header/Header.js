@@ -21,9 +21,9 @@ class Header extends Component {
               </div>
               <div className="uk-navbar-item re-navbar-item uk-navbar-right">
                 <ul className="uk-iconnav">
-                  <li><a href="#" className="uk-button" data-uk-icon="icon: plus" /></li>
-                  <li><a href="#" className="uk-button" data-uk-icon="icon: cog" /></li>
-                  <li><a href="#" className="uk-button" data-uk-icon="icon: sign-out" /></li>
+                  <li><a href="#" className="uk-button" data-uk-icon="icon: plus" title="Add a reminder" data-uk-tooltip /></li>
+                  <li><a href="#" className="uk-button" data-uk-icon="icon: cog" title="Settings" data-uk-tooltip /></li>
+                  <li><a href="#" className="uk-button" data-uk-icon="icon: sign-out" title="Sign out" data-uk-tooltip /></li>
                 </ul>
               </div>
             </nav>
