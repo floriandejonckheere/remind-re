@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
-import './Header.css'
+import './Navbar.css'
 
 import logo from './logo.svg'
 
-class Header extends Component {
+class Navbar extends Component {
   render() {
     return (
       <div className="Header uk-background-primary uk-light">
@@ -42,4 +42,4 @@ class Header extends Component {
   }
 }
 
-export default Header
+export default Navbar
