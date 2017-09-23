@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import Searchbar from 'components/navbar/searchbar/Searchbar'
+
 import './Navbar.css'
 
 import logo from './logo.svg'
@@ -17,7 +19,7 @@ class Navbar extends Component {
                 </a>
               </div>
               <div className="uk-navbar-item re-navbar-item uk-width-expand">
-                <input type="text" className="uk-input re-navbar-search" placeholder="Quick search" />
+                <Searchbar />
               </div>
               <div className="uk-navbar-item re-navbar-item uk-navbar-right">
                 <ul className="uk-iconnav">
