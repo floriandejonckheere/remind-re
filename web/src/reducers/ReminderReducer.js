@@ -26,7 +26,7 @@ function addReminder(state, action) {
  * @param state
  * @param action
  */
-function deleteReminder(state, action) {
+function removeReminder(state, action) {
   return Immutable(state).delete(action.id)
 }
 
