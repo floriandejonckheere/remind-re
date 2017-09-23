@@ -5,6 +5,8 @@ import Sidebar from 'components/sidebar/Sidebar'
 import Navbar from 'components/navbar/Navbar'
 import ReminderList from 'components/reminderlist/ReminderList'
 
+import reminders from 'data/reminders'
+
 class App extends Component {
   render() {
     return (
@@ -16,7 +18,9 @@ class App extends Component {
             <Sidebar />
           </div>
           <div className="uk-width-1-3@l">
-            <ReminderList />
+            <ReminderList
+              reminders={reminders}
+            />
           </div>
         </div>
       </div>
