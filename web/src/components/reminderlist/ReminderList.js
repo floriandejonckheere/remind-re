@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import Reminder from 'components/reminder/Reminder'
+import Reminder from 'components/reminderlist/reminder/Reminder'
 
 import './ReminderList.css'
 
