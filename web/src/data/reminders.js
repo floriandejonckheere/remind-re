@@ -4,7 +4,6 @@ export default [{
   active: true,
   standalone: false,
   due: 1506183794276,
-  recurring: false,
   interval: null,
   labels: ['personal', 'ucn'],
   alerts: [
@@ -23,7 +22,6 @@ export default [{
   active: true,
   standalone: false,
   due: 1507083794276,
-  recurring: true,
   interval: 604800,
   labels: ['personal'],
   alerts: [
@@ -35,10 +33,9 @@ export default [{
 }, {
   id: 2,
   title: 'Pay bills',
-  active: true,
+  active: false,
   standalone: true,
   due: 1506083794276,
-  recurring: false,
   interval: null,
   labels: ['personal'],
   alerts: [
