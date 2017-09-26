@@ -1,33 +1,28 @@
 # Remindre
 
-A quick set-and-forget reminder app built in React Native.
+A quick set-and-forget app built in React
 
-
-## Getting started
+## Setup
 
 Install the following software first:
 
-- RVM
-- Ruby 2.4.1
+- NodeJS
 - Yarn
-- NodeJS 8.5.0
 
-Then install all dependencies:
-
-```
-$ # Back-end dependencies
-$ gem install bundler --no-ri --no-rdoc
-$ bundle install
-
-$ # Front-end dependencies (based in `web` folder)
-$ cd web && yarn install
-```
-
-## Development
-
-Start both the Rails server and the Webpack server:
+Then install the dependencies:
 
 ```
-$ bundle exec rails server
-$ cd web; yarn run start
+$ yarn
+```
+
+Build a development bundle and run a server:
+
+```
+$ yarn start
+```
+
+Build a production bundle:
+
+```
+$ yarn build
 ```
