@@ -7,7 +7,7 @@ class Entry extends Component {
   render() {
     return (
       <li className="uk-padding-small">
-        <div className="Entry uk-grid">
+        <div className="uk-grid">
           <div className="uk-flex uk-flex-middle">
             <input type="checkbox" className="uk-checkbox" />
           </div>

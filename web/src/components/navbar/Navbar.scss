@@ -1,6 +1,6 @@
 @import "../variables.scss";
 
-.Header {
+.re-navbar {
   position: relative;
 
   border-bottom: 1px solid darken($color-primary, 5%);
@@ -11,8 +11,9 @@
   .re-logo {
     height: 30px;
   }
-}
 
-.re-navbar-item {
-  max-height: 50px;
+  .re-navbar-item {
+    max-height: 50px;
+  }
+
 }

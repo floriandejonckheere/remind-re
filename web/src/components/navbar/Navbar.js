@@ -9,7 +9,7 @@ import logo from './logo.svg'
 class Navbar extends Component {
   render() {
     return (
-      <div className="Header uk-background-primary uk-light">
+      <div className="re-navbar uk-background-primary uk-light">
         <div className="uk-grid uk-flex-center">
           <div className="uk-width-1-2@l">
             <nav className="uk-navbar ">

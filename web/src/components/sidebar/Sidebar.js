@@ -16,7 +16,7 @@ class Sidebar extends Component {
     })
 
     return (
-      <div className="Sidebar uk-padding">
+      <div className="uk-padding">
         <ul className="uk-nav uk-nav-default">
           <Entry title="today" active="true" />
           <Entry title="tomorrow" />

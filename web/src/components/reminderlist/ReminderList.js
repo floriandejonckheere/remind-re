@@ -17,7 +17,7 @@ class ReminderList extends Component {
     })
 
     return (
-      <div className="ReminderList uk-padding" data-uk-height-viewport="expand: true">
+      <div className="re-reminder-list uk-padding" data-uk-height-viewport="expand: true">
         <strong>Today</strong>
         <ul className="uk-list uk-list-divider">
           { rows }
