@@ -22,7 +22,10 @@ class Navbar extends Component {
                 </a>
               </div>
               <div className="uk-navbar-item re-navbar-item uk-width-expand uk-visible@s">
-                <Searchbar />
+                <Searchbar
+                  filter={this.props.filter}
+                  onFilterTextInput={this.props.onFilterTextInput}
+                />
               </div>
               <div className="uk-navbar-item re-navbar-item uk-navbar-right uk-visible@s">
                 <ul className="uk-iconnav">

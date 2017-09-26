@@ -8,6 +8,9 @@ class ReminderList extends Component {
   render() {
     let rows = []
     this.props.reminders.forEach((reminder) => {
+      if (reminder.title.indexOf(this.props.filter) === -1)
+        return
+
       rows.push(
         <Entry
           data={reminder}
