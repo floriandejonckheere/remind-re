@@ -14,15 +14,23 @@ class App extends Component {
 
     this.state = {
       textFilter: '',
-      dateFilter: [],
+      dateFilter: 'all reminders',
     }
 
     this.handleFilterTextInput = this.handleFilterTextInput.bind(this)
+    this.handleFilterDateInput = this.handleFilterDateInput.bind(this)
   }
 
   handleFilterTextInput(textFilter) {
     this.setState({
       textFilter: textFilter
+    })
+  }
+
+  handleFilterDateInput(dateFilter) {
+    this.setState({
+      textFilter: '',
+      dateFilter: dateFilter
     })
   }
 
@@ -38,12 +46,15 @@ class App extends Component {
           <div className="uk-width-1-6@l uk-width-1-4@m">
             <Sidebar
               labels={labels}
+              dateFilter={this.state.dateFilter}
+              onFilterDateInput={this.handleFilterDateInput}
             />
           </div>
           <div className="uk-width-1-3@l uk-width-1-2@m">
             <ReminderList
               reminders={reminders}
               textFilter={this.state.textFilter}
+              dateFilter={this.state.dateFilter}
             />
           </div>
         </div>

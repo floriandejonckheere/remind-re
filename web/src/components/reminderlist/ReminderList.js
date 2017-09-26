@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
+import moment from 'moment'
 
 import Entry from 'components/reminderlist/entry/Entry'
-import Searchbar from 'components/navbar/searchbar/Searchbar'
 
 import './ReminderList.css'
 
@@ -9,6 +9,20 @@ class ReminderList extends Component {
   render() {
     let rows = []
     this.props.reminders.forEach((reminder) => {
+      // TODO: filter recurring events
+      let date = moment(reminder.due)
+
+      let dateFilters = {
+        'today': [moment().startOf('day'), moment().endOf('day')],
+        'tomorrow': [moment().add(1, 'day').startOf('day'), moment().add(1, 'day').endOf('day')],
+        'this week': [moment().startOf('isoWeek'), moment().endOf('isoWeek')]
+      }
+
+      if (this.props.dateFilter !== 'all reminders' &&
+          (date < dateFilters[this.props.dateFilter][0] ||
+          date > dateFilters[this.props.dateFilter][1]))
+        return
+
       if (reminder.title.toLowerCase().indexOf(this.props.textFilter.toLowerCase()) === -1)
         return
 

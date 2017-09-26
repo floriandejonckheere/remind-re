@@ -18,12 +18,24 @@ class Sidebar extends Component {
     return (
       <div className="uk-padding">
         <ul className="uk-nav uk-nav-default">
-          <Entry title="all reminders" active="true" />
-          <Entry title="today" />
-          <Entry title="tomorrow" />
-          <Entry title="this week" />
+          <Entry title="all reminders"
+             dateFilter={this.props.dateFilter}
+             onFilterDateInput={this.props.onFilterDateInput}
+          />
+          <Entry title="today"
+            dateFilter={this.props.dateFilter}
+            onFilterDateInput={this.props.onFilterDateInput}
+          />
+          <Entry title="tomorrow"
+            dateFilter={this.props.dateFilter}
+            onFilterDateInput={this.props.onFilterDateInput}
+          />
+          <Entry title="this week"
+            dateFilter={this.props.dateFilter}
+            onFilterDateInput={this.props.onFilterDateInput}
+          />
           <div className="uk-margin-large-top" />
-          { rows }
+          {rows}
           <li>
             <a href="#" className="uk-text-primary">
               add label

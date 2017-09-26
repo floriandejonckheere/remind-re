@@ -3,7 +3,7 @@ export default [{
   title: 'Hand in assignment 1',
   active: true,
   standalone: false,
-  due: 1506183794276,
+  due: 1506583794276,
   interval: null,
   labels: ['personal', 'ucn'],
   alerts: [
@@ -21,7 +21,7 @@ export default [{
   title: 'Go to the gym',
   active: true,
   standalone: false,
-  due: 1507083794276,
+  due: 1506883794276,
   interval: 604800,
   labels: ['personal'],
   alerts: [
@@ -35,7 +35,7 @@ export default [{
   title: 'Pay bills',
   active: false,
   standalone: true,
-  due: 1506083794276,
+  due: 1506425832000,
   interval: null,
   labels: ['personal'],
   alerts: [
