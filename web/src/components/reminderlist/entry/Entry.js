@@ -18,7 +18,7 @@ class Entry extends Component {
               : (
                 <s className="uk-text-muted">{ this.props.data.title }</s>
               )}
-              { this.props.data.interval != null &&
+              { this.props.data.interval !== null &&
                 <span className="uk-margin-left uk-text-muted" title="Recurring reminder" data-uk-icon="icon: future; ratio: .8" data-uk-tooltip />
               }
             </div>
