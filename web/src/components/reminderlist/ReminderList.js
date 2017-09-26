@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import Reminder from 'components/reminderlist/reminder/Reminder'
+import Entry from 'components/reminderlist/entry/Entry'
 
 import './ReminderList.css'
 
@@ -9,7 +9,7 @@ class ReminderList extends Component {
     let rows = []
     this.props.reminders.forEach((reminder) => {
       rows.push(
-        <Reminder
+        <Entry
           data={reminder}
           key={reminder.id}
         />

@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import moment from 'moment'
 
-import './Reminder.css'
+import './Entry.css'
 
-class Reminder extends Component {
+class Entry extends Component {
   render() {
     return (
       <li className="uk-padding-small">
-        <div className="Reminder uk-grid">
+        <div className="Entry uk-grid">
           <div className="uk-flex uk-flex-middle">
             <input type="checkbox" className="uk-checkbox" />
           </div>
@@ -43,4 +43,4 @@ class Reminder extends Component {
   }
 }
 
-export default Reminder
+export default Entry
