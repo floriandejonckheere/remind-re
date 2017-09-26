@@ -21,6 +21,11 @@ class ReminderList extends Component {
         <strong>Today</strong>
         <ul className="uk-list uk-list-divider">
           { rows }
+          <li>
+            <a href="#" className="uk-text-primary">
+              <span className="uk-button" data-uk-icon="icon: plus" />add reminder
+            </a>
+          </li>
         </ul>
       </div>
     )

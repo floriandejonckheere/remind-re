@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 
 import Label from 'components/sidebar/label/Label'
 
-import './Sidebar.css'
-
 class Sidebar extends Component {
   render() {
     let rows = []
@@ -25,6 +23,11 @@ class Sidebar extends Component {
           <li className="uk-margin"><a href="#">this week</a></li>
           <li className="uk-margin-large-top" />
           { rows }
+          <li>
+            <a href="#" className="uk-text-primary">
+              add label
+            </a>
+          </li>
         </ul>
       </div>
     )
