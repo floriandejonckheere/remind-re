@@ -15,12 +15,12 @@ class App extends Component {
         <Navbar />
 
         <div className="re-app-content uk-grid uk-flex-center uk-grid-collapse">
-          <div className="uk-width-1-6@l">
+          <div className="uk-width-1-6@l uk-width-1-4@m">
             <Sidebar
               labels={labels}
             />
           </div>
-          <div className="uk-width-1-3@l">
+          <div className="uk-width-1-3@l uk-width-1-2@m">
             <ReminderList
               reminders={reminders}
             />

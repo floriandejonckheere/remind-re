@@ -14,14 +14,17 @@ class Navbar extends Component {
           <div className="uk-width-1-2@l">
             <nav className="uk-navbar ">
               <div className="uk-navbar-item re-navbar-item">
-                <a href="/" className="uk-logo">
+                <a href="#" data-uk-toggle="target: #re-nav-offcanvas" className="uk-logo uk-hidden@s">
+                  <img src={logo} alt="logo" className="re-logo" />
+                </a>
+                <a href="/" className="uk-logo uk-visible@s">
                   <img src={logo} alt="logo" className="re-logo"/>
                 </a>
               </div>
-              <div className="uk-navbar-item re-navbar-item uk-width-expand">
+              <div className="uk-navbar-item re-navbar-item uk-width-expand uk-visible@s">
                 <Searchbar />
               </div>
-              <div className="uk-navbar-item re-navbar-item uk-navbar-right">
+              <div className="uk-navbar-item re-navbar-item uk-navbar-right uk-visible@s">
                 <ul className="uk-iconnav">
                   <li><a href="#" className="uk-button" data-uk-icon="icon: plus" title="Add a reminder" data-uk-tooltip /></li>
                   <li><a href="#" className="uk-button" data-uk-icon="icon: cog" title="Settings" data-uk-tooltip /></li>
@@ -37,6 +40,21 @@ class Navbar extends Component {
                 </ul>
               </div>
             </nav>
+          </div>
+        </div>
+
+        <div id="re-nav-offcanvas" data-uk-offcanvas="overlay: true">
+          <div className="uk-offcanvas-bar uk-background-primary">
+            <button className="uk-offcanvas-close uk-close uk-icon uk-light" type="button" data-uk-close />
+            <ul className="uk-nav uk-nav-default">
+              <li className="uk-nav-header">Remindre</li>
+              <li><a href="#">Add a reminder</a></li>
+              <li className="uk-nav-header">Settings</li>
+              <li><a href="#">Help &amp; support</a></li>
+              <li><a href="#">Settings</a></li>
+              <li className="uk-nav-divider" />
+              <li><a href="#">Sign out</a></li>
+            </ul>
           </div>
         </div>
       </div>
