@@ -20,7 +20,7 @@ class Searchbar extends Component {
           type="search"
           className="uk-input uk-search-input"
           placeholder="Quick search"
-          value={this.props.filter}
+          value={this.props.textFilter}
           onChange={this.handleFilterTextInputChange}
         />
       </div>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import Entry from 'components/reminderlist/entry/Entry'
+import Searchbar from 'components/navbar/searchbar/Searchbar'
 
 import './ReminderList.css'
 
@@ -8,7 +9,7 @@ class ReminderList extends Component {
   render() {
     let rows = []
     this.props.reminders.forEach((reminder) => {
-      if (reminder.title.indexOf(this.props.filter) === -1)
+      if (reminder.title.toLowerCase().indexOf(this.props.textFilter.toLowerCase()) === -1)
         return
 
       rows.push(
@@ -20,7 +21,7 @@ class ReminderList extends Component {
     })
 
     return (
-      <div className="re-reminder-list uk-padding" data-uk-height-viewport="expand: true">
+      <div className="re-reminder-list uk-padding uk-height-1-1" data-uk-height-viewport="expand: true">
         <strong>Today</strong>
         <ul className="uk-list uk-list-divider">
           { rows }

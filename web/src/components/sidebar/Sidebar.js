@@ -18,7 +18,8 @@ class Sidebar extends Component {
     return (
       <div className="uk-padding">
         <ul className="uk-nav uk-nav-default">
-          <Entry title="today" active="true" />
+          <Entry title="all reminders" active="true" />
+          <Entry title="today" />
           <Entry title="tomorrow" />
           <Entry title="this week" />
           <div className="uk-margin-large-top" />

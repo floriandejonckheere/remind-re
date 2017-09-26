@@ -13,15 +13,16 @@ class App extends Component {
     super(props)
 
     this.state = {
-      filter: ''
+      textFilter: '',
+      dateFilter: [],
     }
 
     this.handleFilterTextInput = this.handleFilterTextInput.bind(this)
   }
 
-  handleFilterTextInput(filterText) {
+  handleFilterTextInput(textFilter) {
     this.setState({
-      filter: filterText
+      textFilter: textFilter
     })
   }
 
@@ -29,7 +30,7 @@ class App extends Component {
     return (
       <div>
         <Navbar
-          filter={this.state.filter}
+          textFilter={this.state.textFilter}
           onFilterTextInput={this.handleFilterTextInput}
         />
 
@@ -42,7 +43,7 @@ class App extends Component {
           <div className="uk-width-1-3@l uk-width-1-2@m">
             <ReminderList
               reminders={reminders}
-              filter={this.state.filter}
+              textFilter={this.state.textFilter}
             />
           </div>
         </div>
