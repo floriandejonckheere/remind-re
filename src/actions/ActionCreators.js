@@ -11,7 +11,7 @@ export function addReminder(props) {
       recurring: Boolean(props.interval),
       interval: props.interval,
       labels: props.labels,
-      alerts: props.alerts
+      alerts: props.alerts,
     }
   }
 }
@@ -19,6 +19,13 @@ export function addReminder(props) {
 export function removeReminder(id) {
   return {
     type: ActionTypes.REMOVE_REMINDER,
-    id: id
+    id: id,
+  }
+}
+
+export function setFilter(filter) {
+  return {
+    type: ActionTypes.SET_FILTER,
+    filter: filter,
   }
 }
