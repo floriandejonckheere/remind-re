@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux'
 
-import Immutable from 'seamless-immutable'
-
 import ReminderReducer from 'reducers/ReminderReducer'
+import FilterReducer from 'reducers/FilterReducer'
 
-const reminderApp = combineReducers({
-  ReminderReducer
+const RootReducer = combineReducers({
+  ReminderReducer,
+  FilterReducer,
 })
 
-export default reminderApp
+export default RootReducer

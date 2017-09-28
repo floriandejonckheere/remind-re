@@ -38,8 +38,10 @@ function removeReminder(state, action) {
  */
 function ReminderReducer(state = initialState, action) {
   switch (action.type) {
-    case ActionTypes.ADD_REMINDER: return addReminder(state, action)
-    case ActionTypes.REMOVE_REMINDER: return removeReminder(state, action)
+    case ActionTypes.ADD_REMINDER:
+      return addReminder(state, action)
+    case ActionTypes.REMOVE_REMINDER:
+      return removeReminder(state, action)
     default:
       return state
   }
