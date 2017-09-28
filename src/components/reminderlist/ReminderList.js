@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import moment from 'moment'
+import PropTypes from 'prop-types'
 
 import Entry from 'components/reminderlist/entry/Entry'
 
@@ -48,6 +49,12 @@ class ReminderList extends Component {
       </div>
     )
   }
+}
+
+ReminderList.propTypes = {
+  reminders: PropTypes.array,
+  dateFilter: PropTypes.string,
+  textFilter: PropTypes.string,
 }
 
 export default ReminderList

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 import './Searchbar.css'
 
@@ -26,6 +27,11 @@ class Searchbar extends Component {
       </div>
     )
   }
+}
+
+Searchbar.propTypes = {
+  textFilter: PropTypes.string,
+  onFilterTextInput: PropTypes.func.isRequired
 }
 
 export default Searchbar
