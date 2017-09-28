@@ -41,7 +41,7 @@ class ReminderList extends Component {
         <ul className="uk-list uk-list-divider">
           { rows }
           <li>
-            <a href="#" className="uk-text-primary">
+            <a href="#" className="uk-text-primary" data-uk-toggle="target: #modal-add-reminder">
               <span className="uk-button" data-uk-icon="icon: plus" />add reminder
             </a>
           </li>
@@ -52,7 +52,23 @@ class ReminderList extends Component {
 }
 
 ReminderList.propTypes = {
-  reminders: PropTypes.array,
+  reminders: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      active: PropTypes.bool.isRequired,
+      standalone: PropTypes.bool.isRequired,
+      due: PropTypes.number.isRequired,
+      interval: PropTypes.number,
+      labels: PropTypes.arrayOf(PropTypes.string),
+      alerts: PropTypes.arrayOf(
+        PropTypes.shape({
+          time: PropTypes.number.isRequired,
+          type: PropTypes.arrayOf(PropTypes.string).isRequired,
+        })
+      ).isRequired,
+    }).isRequired,
+  ).isRequired,
   dateFilter: PropTypes.string,
   textFilter: PropTypes.string,
 }
