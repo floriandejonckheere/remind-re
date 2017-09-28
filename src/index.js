@@ -10,7 +10,6 @@ import registerServiceWorker from './registerServiceWorker'
 
 import './index.css'
 
-import 'store'
 import AppRouter from 'AppRouter'
 
 // Active icons plugin
