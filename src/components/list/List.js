@@ -2,11 +2,11 @@ import React, { Component } from 'react'
 import moment from 'moment'
 import PropTypes from 'prop-types'
 
-import Entry from 'components/reminderlist/entry/Entry'
+import Entry from 'components/list/entry/Entry'
 
-import './ReminderList.css'
+import './List.css'
 
-class ReminderList extends Component {
+class List extends Component {
   render() {
     let rows = []
     this.props.reminders.forEach((reminder) => {
@@ -51,7 +51,7 @@ class ReminderList extends Component {
   }
 }
 
-ReminderList.propTypes = {
+List.propTypes = {
   reminders: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
@@ -73,4 +73,4 @@ ReminderList.propTypes = {
   textFilter: PropTypes.string,
 }
 
-export default ReminderList
+export default List

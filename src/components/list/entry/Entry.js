@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import moment from 'moment'
+import PropTypes from 'prop-types'
 
 import './Entry.css'
 
@@ -13,19 +14,19 @@ class Entry extends Component {
           </div>
           <div className="uk-width-expand">
             <div className="uk-text-lead uk-text-truncate">
-              { this.props.data.active ?
-                this.props.data.title
+              {this.props.data.active ?
+                this.props.children
               : (
-                <s className="uk-text-muted">{ this.props.data.title }</s>
+                <s className="uk-text-muted">{this.props.children}</s>
               )}
-              { this.props.data.interval !== null &&
+              {this.props.data.interval !== null &&
                 <span className="uk-margin-left uk-text-muted" title="Recurring reminder" data-uk-icon="icon: future; ratio: .8" data-uk-tooltip />
               }
             </div>
             <div className="uk-grid uk-flex uk-flex-between">
               <div className="uk-flex uk-flex-middle">
                 <p className="uk-text-meta uk-margin-remove-top">
-                  { moment(this.props.data.due).fromNow() }
+                  {moment(this.props.data.due).fromNow()}
                 </p>
               </div>
               <div className="uk-flex-right uk-hidden@m">
@@ -51,6 +52,12 @@ class Entry extends Component {
       </li>
     )
   }
+}
+
+// TODO: abstract reminder proptypes
+Entry.propTypes = {
+  reminder: PropTypes.any.isRequired,
+  children: PropTypes.node.isRequired,
 }
 
 export default Entry

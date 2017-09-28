@@ -4,7 +4,7 @@ import './App.css'
 
 import Sidebar from 'components/sidebar/Sidebar'
 import Navbar from 'components/navbar/Navbar'
-import ReminderList from 'components/reminderlist/ReminderList'
+import List from 'components/list/List'
 
 import reminders from 'data/reminders'
 import labels from 'data/labels'
@@ -52,7 +52,7 @@ class App extends Component {
             />
           </div>
           <div className="uk-width-1-3@l uk-width-1-2@m">
-            <ReminderList
+            <List
               reminders={reminders}
               textFilter={this.state.textFilter}
               dateFilter={this.state.dateFilter}
