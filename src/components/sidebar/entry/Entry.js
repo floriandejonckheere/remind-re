@@ -1,26 +1,25 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 class Entry extends Component {
-  constructor(props) {
-    super(props)
-
-    this.handleFilterDateInputChange = this.handleFilterDateInputChange.bind(this)
-  }
-
-  handleFilterDateInputChange(e) {
-    e.preventDefault()
-    this.props.onFilterDateInput(this.props.title)
-  }
-
   render() {
     return (
-      <li className={ this.props.title === this.props.dateFilter ? 'uk-active' : '' }>
-        <a href="#" className="uk-margin" onClick={this.handleFilterDateInputChange}>
-          {this.props.title}
+      <li className={this.props.active ? 'uk-active' : ''}>
+        <a
+          href="#"
+          className="uk-margin"
+          onClick={e => {e.preventDefault(); this.props.onClick()}}>
+          {this.props.children}
         </a>
       </li>
     )
   }
+}
+
+Entry.propTypes = {
+  active: PropTypes.bool.isRequired,
+  children: PropTypes.node.isRequired,
+  onClick: PropTypes.func.isRequired,
 }
 
 export default Entry
