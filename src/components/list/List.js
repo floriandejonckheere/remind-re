@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import Entry from 'components/list/entry/Entry'
+import EntryContainer from 'components/list/entry/EntryContainer'
 
 import './List.css'
 
@@ -12,7 +12,10 @@ class List extends Component {
         <strong>{this.props.title}</strong>
         <ul className="uk-list uk-list-divider">
           {this.props.reminders.map(reminder => (
-            <Entry data={reminder} key={reminder.id} />
+            <EntryContainer
+              data={reminder}
+              key={reminder.id}
+            />
           ))}
           {this.props.reminders.length === 0 && (
             <li data-uk-alert>No reminders matched your query</li>

@@ -32,7 +32,7 @@ class Entry extends Component {
               <div className="uk-flex-right uk-hidden@m">
                 <ul className="uk-navbar-nav">
                   <li><a href="#" title="Edit" data-uk-icon="icon: pencil" data-uk-tooltip /></li>
-                  <li><a href="#" title="Delete" data-uk-icon="icon: close" data-uk-tooltip /></li>
+                  <li><a href="#" title="Delete" data-uk-icon="icon: close" data-uk-tooltip onClick={this.props.onClickDelete} /></li>
                 </ul>
               </div>
             </div>
@@ -43,7 +43,7 @@ class Entry extends Component {
               <div className="uk-nav uk-dropdown-nav uk-padding-small" data-uk-dropdown="mode: click; pos: bottom-left">
                 <ul className="uk-nav uk-nav-default">
                   <li><a href="#"><span className="uk-link-icon" data-uk-icon="icon: pencil" /> Edit</a></li>
-                  <li><a href="#"><span className="uk-link-icon" data-uk-icon="icon: trash" /> Delete</a></li>
+                  <li><a href="#" onClick={this.props.onClickDelete}><span className="uk-link-icon" data-uk-icon="icon: trash" /> Delete</a></li>
                 </ul>
               </div>
             </ul>

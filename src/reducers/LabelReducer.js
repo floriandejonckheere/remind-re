@@ -13,7 +13,7 @@ const initialState = Immutable({
  * @param state
  * @param action
  */
-function addLabel(state, action) {
+function createLabel(state, action) {
   return Immutable.merge(state, {
     labelId: state.labelId + 1,
     labels: {
@@ -27,7 +27,7 @@ function addLabel(state, action) {
  * @param state
  * @param action
  */
-function removeLabel(state, action) {
+function deleteLabel(state, action) {
   return Immutable(state).delete(action.id)
 }
 
@@ -39,10 +39,10 @@ function removeLabel(state, action) {
  */
 function LabelReducer(state = initialState, action) {
   switch (action.type) {
-    case ActionTypes.ADD_LABEL:
-      return addLabel(state, action)
-    case ActionTypes.REMOVE_LABEL:
-      return removeLabel(state, action)
+    case ActionTypes.CREATE_LABEL:
+      return createLabel(state, action)
+    case ActionTypes.DELETE_LABEL:
+      return deleteLabel(state, action)
     default:
       return state
   }

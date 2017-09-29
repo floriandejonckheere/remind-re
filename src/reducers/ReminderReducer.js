@@ -13,7 +13,7 @@ const initialState = Immutable({
  * @param state
  * @param action
  */
-function addReminder(state, action) {
+function createReminder(state, action) {
   return Immutable.merge(state, {
     reminderId: state.reminderId + 1,
     reminders: {
@@ -27,8 +27,10 @@ function addReminder(state, action) {
  * @param state
  * @param action
  */
-function removeReminder(state, action) {
-  return Immutable(state).delete(action.id)
+function deleteReminder(state, action) {
+  return Immutable.merge(state, {
+    reminders: state.reminders.filter(r => r.id !== action.id)
+  })
 }
 
 /**
@@ -39,10 +41,10 @@ function removeReminder(state, action) {
  */
 function ReminderReducer(state = initialState, action) {
   switch (action.type) {
-    case ActionTypes.ADD_REMINDER:
-      return addReminder(state, action)
-    case ActionTypes.REMOVE_REMINDER:
-      return removeReminder(state, action)
+    case ActionTypes.CREATE_REMINDER:
+      return createReminder(state, action)
+    case ActionTypes.DELETE_REMINDER:
+      return deleteReminder(state, action)
     default:
       return state
   }

@@ -4,9 +4,9 @@ import * as ActionTypes from 'actions/ActionTypes'
  * Reminder actions
  *
  */
-export function addReminder(props) {
+export function createReminder(props) {
   return {
-    type: ActionTypes.ADD_REMINDER,
+    type: ActionTypes.CREATE_REMINDER,
     data: {
       title: props.title,
       active: true,
@@ -20,9 +20,9 @@ export function addReminder(props) {
   }
 }
 
-export function removeReminder(id) {
+export function deleteReminder(id) {
   return {
-    type: ActionTypes.REMOVE_REMINDER,
+    type: ActionTypes.DELETE_REMINDER,
     id: id,
   }
 }
@@ -31,18 +31,18 @@ export function removeReminder(id) {
  * Label actions
  *
  */
-export function addLabel(props) {
+export function createLabel(props) {
   return {
-    type: ActionTypes.ADD_LABEL,
+    type: ActionTypes.CREATE_LABEL,
     data: {
       title: props.title,
     }
   }
 }
 
-export function removeLabel(id) {
+export function deleteLabel(id) {
   return {
-    type: ActionTypes.REMOVE_LABEL,
+    type: ActionTypes.DELETE_LABEL,
     id: id,
   }
 }

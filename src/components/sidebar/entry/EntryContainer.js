@@ -1,4 +1,5 @@
 import { connect } from 'react-redux'
+
 import { setFilter } from 'actions/ActionCreators'
 import Entry from 'components/sidebar/entry/Entry'
 
