@@ -11,10 +11,12 @@ class List extends Component {
       <div className="re-reminder-list uk-padding uk-height-1-1" data-uk-height-viewport="expand: true">
         <strong>{this.props.title}</strong>
         <ul className="uk-list uk-list-divider">
-          {console.log(this.props)}
           {this.props.reminders.map(reminder => (
             <Entry data={reminder} key={reminder.id} />
           ))}
+          {this.props.reminders.length === 0 && (
+            <li data-uk-alert>No reminders matched your query</li>
+          )}
           <li>
             <a href="#" className="uk-text-primary" data-uk-toggle="target: #modal-add-reminder">
               <span className="uk-button" data-uk-icon="icon: plus" />add reminder
