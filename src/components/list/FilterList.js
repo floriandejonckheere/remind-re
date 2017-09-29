@@ -1,14 +1,17 @@
 import { connect } from 'react-redux'
+import moment from 'moment'
 
 import * as Constants from 'actions/Constants'
 import List from 'components/list/List'
 
 function filterByDate(list, filter) {
-  // TODO
-  switch (filter.filter) {
+  switch (filter) {
     case Constants.FILTER_ALL:
+      return list
     case Constants.FILTER_UPCOMING:
+      return list.filter(r => (moment(r.due) > moment() && moment(r.due) < moment().add(1, 'week').endOf('day')))
     case Constants.FILTER_NEXT_WEEK:
+      return list.filter(r => (moment(r.due) > moment().add(1, 'week').startOf('isoWeek') && moment(r.due) < moment().add(1, 'week').endOf('isoWeek')))
     default:
       return list
   }

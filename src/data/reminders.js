@@ -35,7 +35,7 @@ export default [{
   title: 'Pay bills',
   active: false,
   standalone: true,
-  due: 1506425832000,
+  due: 1507225832000,
   interval: null,
   labels: ['personal'],
   alerts: [
