@@ -8,7 +8,7 @@ class LabelFilterList extends Component {
     return (
       <ul className="uk-nav uk-nav-default uk-margin-large-top">
         {this.props.labels.map(label => (
-          <EntryContainer filter={`FILTER_LABEL_${label.id}`} key={label.id} filterType={Constants.LABEL_FILTER}>
+          <EntryContainer filter={label.id} key={label.id} filterType={Constants.LABEL_FILTER}>
             {label.title}
           </EntryContainer>
         ))}

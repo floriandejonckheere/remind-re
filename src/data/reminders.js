@@ -5,7 +5,7 @@ export default [{
   standalone: false,
   due: 1506583794276,
   interval: null,
-  labels: ['personal', 'ucn'],
+  labels: [1],
   alerts: [
     {
       time: 3600,
@@ -23,7 +23,7 @@ export default [{
   standalone: false,
   due: 1506883794276,
   interval: 604800,
-  labels: ['personal'],
+  labels: [0],
   alerts: [
     {
       time: 0,
@@ -37,7 +37,7 @@ export default [{
   standalone: true,
   due: 1507225832000,
   interval: null,
-  labels: ['personal'],
+  labels: [0],
   alerts: [
     {
       time: 3600,

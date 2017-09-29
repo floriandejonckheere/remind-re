@@ -17,9 +17,8 @@ function filterByDate(list, filter) {
   }
 }
 
-function filterByLabel(list, filter) {
-  // TODO
-  return list
+function filterByLabel(list, label) {
+  return list.filter(r => r.labels.includes(label))
 }
 
 function mapStateToProps(state) {
