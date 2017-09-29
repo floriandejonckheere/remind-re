@@ -1,5 +1,9 @@
 import * as ActionTypes from 'actions/ActionTypes'
 
+/**
+ * Reminder actions
+ *
+ */
 export function addReminder(props) {
   return {
     type: ActionTypes.ADD_REMINDER,
@@ -23,6 +27,30 @@ export function removeReminder(id) {
   }
 }
 
+/**
+ * Label actions
+ *
+ */
+export function addLabel(props) {
+  return {
+    type: ActionTypes.ADD_LABEL,
+    data: {
+      title: props.title,
+    }
+  }
+}
+
+export function removeLabel(id) {
+  return {
+    type: ActionTypes.REMOVE_LABEL,
+    id: id,
+  }
+}
+
+/**
+ * Filter actions
+ *
+ */
 export function setFilter(filter) {
   return {
     type: ActionTypes.SET_FILTER,
