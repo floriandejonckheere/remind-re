@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import moment from 'moment'
 import PropTypes from 'prop-types'
 
 import Entry from 'components/list/entry/Entry'
