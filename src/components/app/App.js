@@ -4,9 +4,8 @@ import './App.css'
 
 import Sidebar from 'components/sidebar/Sidebar'
 import Navbar from 'components/navbar/Navbar'
-import List from 'components/list/List'
+import FilterList from 'components/list/FilterList'
 
-import reminders from 'data/reminders'
 import labels from 'data/labels'
 
 class App extends Component {
@@ -52,11 +51,7 @@ class App extends Component {
             />
           </div>
           <div className="uk-width-1-3@l uk-width-1-2@m">
-            <List
-              reminders={reminders}
-              textFilter={this.state.textFilter}
-              dateFilter={this.state.dateFilter}
-            />
+            <FilterList />
           </div>
         </div>
       </div>

@@ -15,9 +15,9 @@ class Entry extends Component {
           <div className="uk-width-expand">
             <div className="uk-text-lead uk-text-truncate">
               {this.props.data.active ?
-                this.props.children
+                this.props.data.title
               : (
-                <s className="uk-text-muted">{this.props.children}</s>
+                <s className="uk-text-muted">{this.props.data.title}</s>
               )}
               {this.props.data.interval !== null &&
                 <span className="uk-margin-left uk-text-muted" title="Recurring reminder" data-uk-icon="icon: future; ratio: .8" data-uk-tooltip />
