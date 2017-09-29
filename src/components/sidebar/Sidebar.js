@@ -7,10 +7,8 @@ class Sidebar extends Component {
   render() {
     return (
       <div className="uk-padding">
-        <ul className="uk-nav uk-nav-default">
-          <DateFilterList />
-          <LabelFilterList />
-        </ul>
+        <DateFilterList />
+        <LabelFilterList labels={this.props.labels} />
       </div>
     )
   }
