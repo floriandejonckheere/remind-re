@@ -6,6 +6,8 @@ import SidebarContainer from 'components/sidebar/SidebarContainer'
 import Navbar from 'components/navbar/Navbar'
 import ListContainer from 'components/list/ListContainer'
 
+import AddModal from 'components/modal/reminders/AddModal'
+
 class App extends Component {
   constructor(props) {
     super(props)
@@ -48,6 +50,8 @@ class App extends Component {
             <ListContainer />
           </div>
         </div>
+
+        <AddModal />
       </div>
     );
   }

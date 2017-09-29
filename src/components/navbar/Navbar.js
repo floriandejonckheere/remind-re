@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
 import SearchbarContainer from 'components/navbar/searchbar/SearchbarContainer'
-import AddModal from 'components/modal/reminders/AddModal'
 
 import './Navbar.css'
 
@@ -49,7 +48,7 @@ class Navbar extends Component {
             <button className="uk-offcanvas-close uk-close uk-icon uk-light" type="button" data-uk-close />
             <ul className="uk-nav uk-nav-default">
               <li className="uk-nav-header">Remindre</li>
-              <li><a href="#">Add a reminder</a></li>
+              <li><a href="#" data-uk-toggle="target: #modal-add-reminder">Add a reminder</a></li>
               <li className="uk-nav-header">Settings</li>
               <li><a href="#">Help &amp; support</a></li>
               <li><a href="#">Settings</a></li>
@@ -58,8 +57,6 @@ class Navbar extends Component {
             </ul>
           </div>
         </div>
-
-        <AddModal />
       </div>
     )
   }
