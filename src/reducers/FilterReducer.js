@@ -1,9 +1,10 @@
 import Immutable from 'seamless-immutable'
+import * as Constants from 'actions/Constants'
 
 import * as ActionTypes from 'actions/ActionTypes'
 
 const initialState = Immutable({
-  filter: ActionTypes.FILTER_ALL,
+  filter: Constants.FILTER_ALL,
 })
 
 function setFilter(state, action) {
