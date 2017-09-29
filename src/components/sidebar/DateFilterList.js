@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import * as Constants from 'actions/Constants'
 import EntryContainer from 'components/sidebar/entry/EntryContainer'
 
-class FilterList extends Component {
+class DateFilterList extends Component {
   render() {
     return (
       <div>
@@ -21,4 +21,4 @@ class FilterList extends Component {
   }
 }
 
-export default FilterList
+export default DateFilterList

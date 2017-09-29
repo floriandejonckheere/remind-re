@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import FilterList from 'components/sidebar/FilterList'
+import DateFilterList from 'components/sidebar/DateFilterList'
 import LabelList from 'components/sidebar/LabelList'
 
 class Sidebar extends Component {
@@ -8,7 +8,7 @@ class Sidebar extends Component {
     return (
       <div className="uk-padding">
         <ul className="uk-nav uk-nav-default">
-          <FilterList />
+          <DateFilterList />
           <LabelList />
         </ul>
       </div>
