@@ -32,7 +32,7 @@ function removeReminder(state, action) {
 }
 
 /**
- * Root reducer
+ * Reminder reducer
  * @param state
  * @param action
  * @returns {{type, id}|*}
