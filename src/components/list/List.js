@@ -9,7 +9,7 @@ class List extends Component {
   render() {
     return (
       <div className="re-reminder-list uk-padding uk-height-1-1" data-uk-height-viewport="expand: true">
-        <strong>Today</strong>
+        <strong>{this.props.title}</strong>
         <ul className="uk-list uk-list-divider">
           {this.props.reminders.map(reminder => (
             <Entry data={reminder} key={reminder.id} />

@@ -23,12 +23,30 @@ function filterByLabel(list, label) {
 
 function mapStateToProps(state) {
   if (state.filter.filterType === Constants.DATE_FILTER) {
+    let title = ''
+
+    switch (state.filter.filter) {
+      case Constants.FILTER_ALL:
+        title = 'All reminders'
+        break
+      case Constants.FILTER_UPCOMING:
+        title = 'Upcoming reminders'
+        break
+      case Constants.FILTER_NEXT_WEEK:
+        title = 'Next week'
+        break
+      default:
+        title = state.filter.filter
+    }
+
     return {
-      reminders: filterByDate(state.reminders.reminders, state.filter.filter)
+      reminders: filterByDate(state.reminders.reminders, state.filter.filter),
+      title: title,
     }
   } else if (state.filter.filterType === Constants.LABEL_FILTER) {
     return {
-      reminders: filterByLabel(state.reminders.reminders, state.filter.filter)
+      reminders: filterByLabel(state.reminders.reminders, state.filter.filter),
+      title: `Label '${state.labels.labels[state.filter.filter].title}'`,
     }
   }
 }
