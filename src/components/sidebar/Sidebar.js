@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import DateFilterList from 'components/sidebar/DateFilterList'
-import LabelList from 'components/sidebar/LabelList'
+import LabelFilterList from 'components/sidebar/LabelFilterList'
 
 class Sidebar extends Component {
   render() {
@@ -9,7 +9,7 @@ class Sidebar extends Component {
       <div className="uk-padding">
         <ul className="uk-nav uk-nav-default">
           <DateFilterList />
-          <LabelList />
+          <LabelFilterList />
         </ul>
       </div>
     )
