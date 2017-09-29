@@ -4,16 +4,6 @@ import PropTypes from 'prop-types'
 import './Searchbar.css'
 
 class Searchbar extends Component {
-  constructor(props) {
-    super(props)
-
-    this.handleFilterTextInputChange = this.handleFilterTextInputChange.bind(this)
-  }
-
-  handleFilterTextInputChange(e) {
-    this.props.onFilterTextInput(e.target.value)
-  }
-
   render() {
     return (
       <div className="re-searchbar uk-width-expand">
@@ -21,8 +11,8 @@ class Searchbar extends Component {
           type="search"
           className="uk-input uk-search-input"
           placeholder="Quick search"
-          value={this.props.textFilter}
-          onChange={this.handleFilterTextInputChange}
+          value={this.props.filter}
+          onChange={this.props.onChange}
         />
       </div>
     )
@@ -30,8 +20,8 @@ class Searchbar extends Component {
 }
 
 Searchbar.propTypes = {
-  textFilter: PropTypes.string,
-  onFilterTextInput: PropTypes.func.isRequired
+  filter: PropTypes.string,
+  onChange: PropTypes.func.isRequired,
 }
 
 export default Searchbar

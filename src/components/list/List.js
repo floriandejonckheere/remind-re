@@ -11,6 +11,7 @@ class List extends Component {
       <div className="re-reminder-list uk-padding uk-height-1-1" data-uk-height-viewport="expand: true">
         <strong>{this.props.title}</strong>
         <ul className="uk-list uk-list-divider">
+          {console.log(this.props)}
           {this.props.reminders.map(reminder => (
             <Entry data={reminder} key={reminder.id} />
           ))}

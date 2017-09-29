@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import Searchbar from 'components/navbar/searchbar/Searchbar'
+import SearchbarContainer from 'components/navbar/searchbar/SearchbarContainer'
 import AddModal from 'components/modal/reminders/AddModal'
 
 import './Navbar.css'
@@ -23,10 +23,7 @@ class Navbar extends Component {
                 </a>
               </div>
               <div className="uk-navbar-item re-navbar-item uk-width-expand uk-visible@s">
-                <Searchbar
-                  textFilter={this.props.textFilter}
-                  onFilterTextInput={this.props.onFilterTextInput}
-                />
+                <SearchbarContainer />
               </div>
               <div className="uk-navbar-item re-navbar-item uk-navbar-right uk-visible@s">
                 <ul className="uk-iconnav">

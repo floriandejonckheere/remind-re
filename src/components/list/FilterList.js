@@ -21,33 +21,51 @@ function filterByLabel(list, label) {
   return list.filter(r => r.labels.includes(label))
 }
 
+function filterByText(list, query) {
+  return list.filter(r => r.title.toLowerCase().includes(query.toLowerCase()))
+}
+
 function mapStateToProps(state) {
-  if (state.filter.filterType === Constants.DATE_FILTER) {
-    let title = ''
+  switch (state.filter.filterType) {
+    case Constants.DATE_FILTER:
+      let title = ''
 
-    switch (state.filter.filter) {
-      case Constants.FILTER_ALL:
-        title = 'All reminders'
-        break
-      case Constants.FILTER_UPCOMING:
-        title = 'Upcoming reminders'
-        break
-      case Constants.FILTER_NEXT_WEEK:
-        title = 'Next week'
-        break
-      default:
-        title = state.filter.filter
-    }
+      switch (state.filter.filter) {
+        case Constants.FILTER_ALL:
+          title = 'All reminders'
+          break
+        case Constants.FILTER_UPCOMING:
+          title = 'Upcoming reminders'
+          break
+        case Constants.FILTER_NEXT_WEEK:
+          title = 'Next week'
+          break
+        default:
+          title = state.filter.filter
+      }
 
-    return {
-      reminders: filterByDate(state.reminders.reminders, state.filter.filter),
-      title: title,
-    }
-  } else if (state.filter.filterType === Constants.LABEL_FILTER) {
-    return {
-      reminders: filterByLabel(state.reminders.reminders, state.filter.filter),
-      title: `Label '${state.labels.labels[state.filter.filter].title}'`,
-    }
+      return {
+        reminders: filterByDate(state.reminders.reminders, state.filter.filter),
+        title: title,
+      }
+      break
+    case Constants.LABEL_FILTER:
+      return {
+        reminders: filterByLabel(state.reminders.reminders, state.filter.filter),
+        title: `Label '${state.labels.labels[state.filter.filter].title}'`,
+      }
+      break
+    case Constants.TEXT_FILTER:
+      return {
+        reminders: filterByText(state.reminders.reminders, state.filter.filter),
+        title: `Search query '${state.filter.filter}'`,
+      }
+      break
+    default:
+      return {
+        reminders: state.reminders.reminders,
+        title: `Unknown filter: ${state.filter.filterType}: ${state.filter.filter}`,
+      }
   }
 }
 
