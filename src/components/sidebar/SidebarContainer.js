@@ -7,11 +7,9 @@ function mapStateToProps(state, ownProps) {
   }
 }
 
-function mapDispatchToProps(dispatch, ownProps) {
-  return {}
-}
+function mapDispatchToProps(dispatch, ownProps) {}
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(Sidebar)
