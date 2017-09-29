@@ -4,9 +4,7 @@ import './App.css'
 
 import SidebarContainer from 'components/sidebar/SidebarContainer'
 import Navbar from 'components/navbar/Navbar'
-import FilterList from 'components/list/FilterList'
-
-import labels from 'data/labels'
+import ListContainer from 'components/list/ListContainer'
 
 class App extends Component {
   constructor(props) {
@@ -47,7 +45,7 @@ class App extends Component {
             <SidebarContainer />
           </div>
           <div className="uk-width-1-3@l uk-width-1-2@m">
-            <FilterList />
+            <ListContainer />
           </div>
         </div>
       </div>
