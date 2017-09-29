@@ -4,14 +4,14 @@ import Entry from 'components/sidebar/entry/Entry'
 
 function mapStateToProps(state, ownProps) {
   return {
-    active: ownProps.filter === state.filter.filter
+    active: (ownProps.filterType === state.filter.filterType && ownProps.filter === state.filter.filter)
   }
 }
 
 function mapDispatchToProps(dispatch, ownProps) {
   return {
     onClick: () => {
-      dispatch(setFilter(ownProps.filter))
+      dispatch(setFilter(ownProps.filterType, ownProps.filter))
     }
   }
 }

@@ -1,3 +1,6 @@
 export const FILTER_ALL = 'FILTER_ALL'
 export const FILTER_UPCOMING = 'FILTER_UPCOMING'
 export const FILTER_NEXT_WEEK = 'FILTER_NEXT_WEEK'
+
+export const DATE_FILTER = 'DATE_FILTER'
+export const LABEL_FILTER = 'LABEL_FILTER'

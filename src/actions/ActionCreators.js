@@ -51,9 +51,10 @@ export function removeLabel(id) {
  * Filter actions
  *
  */
-export function setFilter(filter) {
+export function setFilter(filterType, filter) {
   return {
     type: ActionTypes.SET_FILTER,
-    filter: filter,
+    filterType,
+    filter,
   }
 }

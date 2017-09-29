@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+import * as Constants from 'actions/Constants'
 import EntryContainer from 'components/sidebar/entry/EntryContainer'
 
 class LabelFilterList extends Component {
@@ -7,7 +8,7 @@ class LabelFilterList extends Component {
     return (
       <div className="uk-margin-large-top">
         {this.props.labels.map(label => (
-          <EntryContainer filter={`FILTER_LABEL_${label.id}`} key={label.id}>
+          <EntryContainer filter={`FILTER_LABEL_${label.id}`} key={label.id} filterType={Constants.LABEL_FILTER}>
             {label.title}
           </EntryContainer>
         ))}
