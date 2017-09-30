@@ -58,3 +58,20 @@ export function setFilter(filterType, filter) {
     filter,
   }
 }
+
+/**
+ * App actions
+ *
+ */
+export function setSelection(selection) {
+  return {
+    type: ActionTypes.SET_SELECTION,
+    selection: selection,
+  }
+}
+
+export function clearSelection(selection) {
+  return {
+    type: ActionTypes.SET_SELECTION,
+  }
+}
