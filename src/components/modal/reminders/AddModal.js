@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Modal from 'components/modal/Modal'
 
-class ModalAddReminder extends Component {
+class AddModal extends Component {
   render() {
     return (
       <Modal id="modal-add-reminder">
@@ -21,4 +21,4 @@ class ModalAddReminder extends Component {
   }
 }
 
-export default ModalAddReminder
+export default AddModal
