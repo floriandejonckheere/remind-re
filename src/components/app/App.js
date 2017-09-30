@@ -7,6 +7,12 @@ import Navbar from 'components/navbar/Navbar'
 import ListContainer from 'components/list/ListContainer'
 
 import AddModal from 'components/modal/reminders/AddModal'
+import DeleteModal from 'components/modal/reminders/DeleteModal'
+
+import reminderModalHOC from 'components/modal/reminders/ReminderModalHOC'
+
+const AddModalHOC = reminderModalHOC(AddModal)
+const DeleteModalHOC = reminderModalHOC(DeleteModal)
 
 class App extends Component {
   constructor(props) {
@@ -51,7 +57,8 @@ class App extends Component {
           </div>
         </div>
 
-        <AddModal />
+        <AddModalHOC />
+        <DeleteModalHOC />
       </div>
     );
   }
