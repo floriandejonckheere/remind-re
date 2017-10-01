@@ -29,6 +29,7 @@ function createLabel(state, action) {
  */
 function deleteLabel(state, action) {
   return Immutable.merge(state, {
+    // TODO: remove labels from reminders
     labels: state.labels.filter(r => r.id !== action.id)
   })
 }

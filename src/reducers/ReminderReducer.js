@@ -34,6 +34,18 @@ function deleteReminder(state, action) {
 }
 
 /**
+ * Remove a label
+ * @param state
+ * @param action
+ */
+function deleteLabel(state, action) {
+  return Immutable.merge(state, {
+    // Remove label from reminders
+    reminders: state.reminders.map(r => Immutable(r).merge({ labels: r.labels.filter(l => l !== action.id) }))
+  })
+}
+
+/**
  * Reminder reducer
  * @param state
  * @param action
@@ -45,6 +57,8 @@ function ReminderReducer(state = initialState, action) {
       return createReminder(state, action)
     case ActionTypes.DELETE_REMINDER:
       return deleteReminder(state, action)
+    case ActionTypes.DELETE_LABEL:
+      return deleteLabel(state, action)
     default:
       return state
   }
