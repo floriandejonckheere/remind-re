@@ -28,7 +28,9 @@ function createLabel(state, action) {
  * @param action
  */
 function deleteLabel(state, action) {
-  return Immutable(state).delete(action.id)
+  return Immutable.merge(state, {
+    labels: state.labels.filter(r => r.id !== action.id)
+  })
 }
 
 /**

@@ -24,7 +24,7 @@ class Entry extends Component {
         <a
           href="#"
           className="uk-margin"
-          onClick={e => {e.preventDefault(); this.props.onClick()}}>
+          onClick={this.props.onClick}>
           {this.props.children}
         </a>
       </li>
@@ -36,6 +36,7 @@ Entry.propTypes = {
   active: PropTypes.bool.isRequired,
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func.isRequired,
+  onClickDelete: PropTypes.func.isRequired,
 }
 
 export default Entry
