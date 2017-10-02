@@ -3,8 +3,6 @@ import moment from 'moment'
 export default [{
   id: 0,
   title: 'Hand in final module project',
-  active: true,
-  standalone: false,
   due: 1507809600000,
   interval: null,
   labels: [1],
@@ -21,8 +19,6 @@ export default [{
 }, {
   id: 1,
   title: 'Go to the gym',
-  active: true,
-  standalone: false,
   due: moment().add(2, 'day').unix() * 1000,
   interval: 604800,
   labels: [0],
@@ -35,8 +31,6 @@ export default [{
 }, {
   id: 2,
   title: 'Pay bills',
-  active: false,
-  standalone: true,
   due: moment().endOf('day').subtract(4, 'hours').unix() * 1000,
   interval: null,
   labels: [0],
@@ -49,8 +43,6 @@ export default [{
 }, {
   id: 3,
   title: 'Fix bike',
-  active: true,
-  standalone: true,
   due: moment().add(1, 'day').startOf('day').add(8, 'hours').unix() * 1000,
   interval: null,
   labels: [0, 1],
