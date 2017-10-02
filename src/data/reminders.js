@@ -46,4 +46,18 @@ export default [{
       type: ['sms']
     }
   ]
+}, {
+  id: 3,
+  title: 'Fix bike',
+  active: true,
+  standalone: true,
+  due: moment().add(1, 'day').startOf('day').add(8, 'hours'),
+  interval: null,
+  labels: [0, 1],
+  alerts: [
+    {
+      time: 3600,
+      type: ['sms']
+    }
+  ]
 }]

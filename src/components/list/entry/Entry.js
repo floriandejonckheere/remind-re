@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import moment from 'moment'
 import PropTypes from 'prop-types'
 
+import Label from 'components/list/label/Label'
+
 import './Entry.css'
 
 class Entry extends Component {
@@ -27,6 +29,9 @@ class Entry extends Component {
               <div className="uk-flex uk-flex-middle">
                 <p className="uk-text-meta uk-margin-remove-top">
                   {moment(this.props.data.due).fromNow()}
+                  {this.props.labels.map(l => (
+                    <Label {...l} />
+                  ))}
                 </p>
               </div>
               <div className="uk-flex-right uk-hidden@m">
