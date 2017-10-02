@@ -12,7 +12,7 @@ class LabelFilterList extends Component {
             filter={label.id}
             key={label.id}
             filterType={Constants.LABEL_FILTER}
-            canDelete>
+            updatable>
               {label.title}
           </EntryContainer>
         ))}

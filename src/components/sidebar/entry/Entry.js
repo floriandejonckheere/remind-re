@@ -7,7 +7,7 @@ class Entry extends Component {
   render() {
     return (
       <li className={this.props.active ? 're-sidebar-label-entry uk-active' : 're-sidebar-label-entry'}>
-        {this.props.canDelete && (
+        {this.props.updatable && (
           <div>
             <a
               href="#"
@@ -35,6 +35,7 @@ class Entry extends Component {
 Entry.propTypes = {
   active: PropTypes.bool.isRequired,
   children: PropTypes.node.isRequired,
+  updatable: PropTypes.bool,
   onClick: PropTypes.func.isRequired,
   onClickDelete: PropTypes.func.isRequired,
 }
