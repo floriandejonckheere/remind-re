@@ -10,9 +10,6 @@ class DeleteModal extends Component {
 
         <div className="uk-modal-body">
           Are you sure you want to delete the following reminders:
-          <ul>
-            {console.log(this.props.selection)}
-          </ul>
         </div>
 
         <div>
