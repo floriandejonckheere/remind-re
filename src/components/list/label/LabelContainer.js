@@ -6,14 +6,14 @@ import Label from 'components/list/label/Label'
 
 function mapStateToProps(state, ownProps) {
   return {
-    data: state.labels.labels[ownProps.id]
+    data: state.labels.labels.find(l => l.id === ownProps.id)
   }
 }
 
 function mapDispatchToProps(dispatch, ownProps) {
   return {
-    onClick: () => {
-      dispatch(setFilter(Contants.LABEL_FILTER, ownProps.id))
+    onClick: (id) => {
+      dispatch(setFilter(Contants.LABEL_FILTER, id))
     },
   }
 }

@@ -15,8 +15,7 @@ function mapDispatchToProps(dispatch, ownProps) {
       dispatch(setFilter(ownProps.filterType, ownProps.filter))
     },
     onClickDelete: (id) => {
-      // if (ownProps.active)
-        dispatch(clearFilter())
+      dispatch(clearFilter())
 
       dispatch(deleteLabel(ownProps.filter))
     },

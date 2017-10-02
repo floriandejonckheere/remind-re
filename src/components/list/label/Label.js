@@ -5,12 +5,11 @@ import './Label.css'
 
 class Label extends Component {
   render() {
-    console.log(this.props)
     return (
       <a
         href="#"
         className="uk-margin"
-        onClick={this.props.onClick}>
+        onClick={() => {this.props.onClick(this.props.id)}}>
         <span className="re-label uk-label uk-background-secondary uk-margin-small-left">{this.props.data.title}</span>
       </a>
     )
