@@ -16,7 +16,7 @@ function mapDispatchToProps(dispatch, ownProps) {
     },
     onClickDelete: (id) => {
       dispatch(deleteLabel(ownProps.filter))
-    }
+    },
   }
 }
 
