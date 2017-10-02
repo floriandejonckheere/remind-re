@@ -17,8 +17,11 @@ class LabelFilterList extends Component {
           </EntryContainer>
         ))}
         <li>
-          <a href="#" className="uk-text-primary">
-            add label
+          <a
+            href="#"
+            className="uk-text-primary"
+            onClick={this.props.onClickAdd}>
+              add label
           </a>
         </li>
       </ul>

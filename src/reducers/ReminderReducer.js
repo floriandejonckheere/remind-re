@@ -4,7 +4,7 @@ import reminders from 'data/reminders'
 import * as ActionTypes from 'actions/ActionTypes'
 
 const initialState = Immutable({
-  reminderId: 0,
+  reminderId: 1,
   reminders: reminders
 })
 

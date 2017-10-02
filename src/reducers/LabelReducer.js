@@ -4,7 +4,7 @@ import labels from 'data/labels'
 import * as ActionTypes from 'actions/ActionTypes'
 
 const initialState = Immutable({
-  labelId: 0,
+  labelId: 1,
   labels: labels
 })
 
@@ -14,12 +14,15 @@ const initialState = Immutable({
  * @param action
  */
 function createLabel(state, action) {
+  let id = state.labelId + 1
+
   return Immutable.merge(state, {
-    labelId: state.labelId + 1,
-    labels: {
-      [state.labelId]: action.data
-    }
-  });
+    labelId: id,
+    labels: [...state.labels, {
+      id: id,
+      title: action.title,
+    }],
+  })
 }
 
 /**
@@ -29,7 +32,6 @@ function createLabel(state, action) {
  */
 function deleteLabel(state, action) {
   return Immutable.merge(state, {
-    // TODO: remove labels from reminders
     labels: state.labels.filter(r => r.id !== action.id)
   })
 }

@@ -5,6 +5,7 @@ import './Label.css'
 
 class Label extends Component {
   render() {
+    console.log(this.props)
     return (
       <a
         href="#"

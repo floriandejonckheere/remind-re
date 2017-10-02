@@ -34,9 +34,7 @@ export function deleteReminder(id) {
 export function createLabel(props) {
   return {
     type: ActionTypes.CREATE_LABEL,
-    data: {
-      title: props.title,
-    }
+    title: props.title,
   }
 }
 

@@ -1,4 +1,6 @@
 import { connect } from 'react-redux'
+
+import { createLabel } from 'actions/ActionCreators'
 import Sidebar from 'components/sidebar/Sidebar'
 
 function mapStateToProps(state, ownProps) {
@@ -8,7 +10,11 @@ function mapStateToProps(state, ownProps) {
 }
 
 function mapDispatchToProps(dispatch, ownProps) {
-  return {}
+  return {
+    onClickAdd: function() {
+      dispatch(createLabel({ title: 'new label' }))
+    }
+  }
 }
 
 export default connect(

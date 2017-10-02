@@ -8,7 +8,10 @@ class Sidebar extends Component {
     return (
       <div className="uk-padding">
         <DateFilterList />
-        <LabelFilterList labels={this.props.labels} />
+        <LabelFilterList
+          labels={this.props.labels}
+          onClickAdd={this.props.onClickAdd}
+        />
       </div>
     )
   }

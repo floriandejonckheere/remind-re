@@ -53,7 +53,7 @@ function mapStateToProps(state) {
     case Constants.LABEL_FILTER:
       return {
         reminders: filterByLabel(state.reminders.reminders, state.filter.filter),
-        title: `Label '${state.labels.labels[state.filter.filter].title}'`,
+        title: `Label '${state.labels.labels.find(l => l.id === state.filter.filter).title}'`,
         clearable: true,
       }
     case Constants.TEXT_FILTER:
