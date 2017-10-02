@@ -9,7 +9,6 @@ class Entry extends Component {
 
     this.state = { editing: false }
     this.onClickEdit = this.onClickEdit.bind(this)
-    // this.onChange = this.onChange.bind(this)
   }
 
   render() {
@@ -54,11 +53,6 @@ class Entry extends Component {
   onClickEdit() {
     this.setState({ editing: !this.state.editing })
   }
-
-  // onChange(e) {
-  //   this.onClickEdit()
-  //   this.props.onChange(this.props.filter, e.target.elements[0].value)
-  // }
 }
 
 Entry.propTypes = {
