@@ -50,7 +50,7 @@ List.propTypes = {
       standalone: PropTypes.bool.isRequired,
       due: PropTypes.number.isRequired,
       interval: PropTypes.number,
-      labels: PropTypes.arrayOf(PropTypes.string),
+      labels: PropTypes.arrayOf(PropTypes.number),
       alerts: PropTypes.arrayOf(
         PropTypes.shape({
           time: PropTypes.number.isRequired,

@@ -1,6 +1,5 @@
 import Immutable from 'seamless-immutable'
 
-import reminders from 'data/reminders'
 import * as ActionTypes from 'actions/ActionTypes'
 
 const initialState = Immutable({

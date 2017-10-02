@@ -23,7 +23,7 @@ export default [{
   title: 'Go to the gym',
   active: true,
   standalone: false,
-  due: moment().add(2, 'day'),
+  due: moment().add(2, 'day').unix() * 1000,
   interval: 604800,
   labels: [0],
   alerts: [
@@ -37,7 +37,7 @@ export default [{
   title: 'Pay bills',
   active: false,
   standalone: true,
-  due: moment().endOf('day').subtract(4, 'hours'),
+  due: moment().endOf('day').subtract(4, 'hours').unix() * 1000,
   interval: null,
   labels: [0],
   alerts: [
@@ -51,7 +51,7 @@ export default [{
   title: 'Fix bike',
   active: true,
   standalone: true,
-  due: moment().add(1, 'day').startOf('day').add(8, 'hours'),
+  due: moment().add(1, 'day').startOf('day').add(8, 'hours').unix() * 1000,
   interval: null,
   labels: [0, 1],
   alerts: [

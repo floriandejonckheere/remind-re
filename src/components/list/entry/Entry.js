@@ -30,7 +30,7 @@ class Entry extends Component {
                 <p className="uk-text-meta uk-margin-remove-top">
                   {moment(this.props.data.due).fromNow()}
                   {this.props.data.labels.map(id => (
-                    <LabelContainer id={id} />
+                    <LabelContainer id={id} key={id} />
                   ))}
                 </p>
               </div>
@@ -61,8 +61,7 @@ class Entry extends Component {
 
 // TODO: abstract reminder proptypes
 Entry.propTypes = {
-  reminder: PropTypes.any.isRequired,
-  children: PropTypes.node.isRequired,
+  data: PropTypes.any.isRequired,
 }
 
 export default Entry

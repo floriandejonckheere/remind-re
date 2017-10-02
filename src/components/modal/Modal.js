@@ -15,7 +15,7 @@ class Modal extends Component {
 }
 
 Modal.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
 }
 
