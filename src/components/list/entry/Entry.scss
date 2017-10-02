@@ -1,3 +1,4 @@
-.re-reminder-status-icon {
-  font-size: .8em;
+.re-reminder-entry {
+  .re-more-icon { opacity: 0; }
+  &:hover .re-more-icon { opacity: 1; }
 }

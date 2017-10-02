@@ -9,7 +9,7 @@ import './Entry.css'
 class Entry extends Component {
   render() {
     return (
-      <li className="uk-padding-small">
+      <li className="re-reminder-entry uk-padding-small">
         <div className="uk-grid">
           <div className="uk-flex uk-flex-middle uk-hidden">
             <input type="checkbox" className="uk-checkbox" />
@@ -39,15 +39,16 @@ class Entry extends Component {
             </div>
           </div>
           <div className="uk-flex uk-flex-middle uk-visible@m">
-            <ul className="uk-iconnav">
-              <li><a href="#" className="uk-button" data-uk-icon="icon: more" /></li>
-              <div className="uk-nav uk-dropdown-nav uk-padding-small" data-uk-dropdown="mode: click; pos: bottom-left">
-                <ul className="uk-nav uk-nav-default">
-                  <li><a href="#"><span className="uk-link-icon" data-uk-icon="icon: pencil" /> Edit</a></li>
-                  <li><a href="#" onClick={this.props.onClickDelete}><span className="uk-link-icon" data-uk-icon="icon: trash" /> Delete</a></li>
-                </ul>
-              </div>
-            </ul>
+            <a
+              href="#"
+              className="re-more-icon uk-float-right uk-button"
+              data-uk-icon="icon: more; ratio: .8" />
+            <div className="uk-nav uk-dropdown-nav uk-padding-small" data-uk-dropdown="mode: click; pos: bottom-left">
+              <ul className="uk-nav uk-nav-default">
+                <li><a href="#"><span className="uk-link-icon" data-uk-icon="icon: pencil" /> Edit</a></li>
+                <li><a href="#" onClick={this.props.onClickDelete}><span className="uk-link-icon" data-uk-icon="icon: trash" /> Delete</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </li>
