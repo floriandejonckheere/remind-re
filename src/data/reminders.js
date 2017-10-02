@@ -1,9 +1,11 @@
+import moment from 'moment'
+
 export default [{
   id: 0,
-  title: 'Hand in assignment 1',
+  title: 'Hand in final module project',
   active: true,
   standalone: false,
-  due: 1506583794276,
+  due: 1507809600000,
   interval: null,
   labels: [1],
   alerts: [
@@ -21,7 +23,7 @@ export default [{
   title: 'Go to the gym',
   active: true,
   standalone: false,
-  due: 1506883794276,
+  due: moment().add(2, 'day'),
   interval: 604800,
   labels: [0],
   alerts: [
@@ -35,7 +37,7 @@ export default [{
   title: 'Pay bills',
   active: false,
   standalone: true,
-  due: 1507225832000,
+  due: moment().endOf('day').subtract(4, 'hours'),
   interval: null,
   labels: [0],
   alerts: [
