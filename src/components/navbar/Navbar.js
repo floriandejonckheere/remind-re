@@ -10,8 +10,8 @@ class Navbar extends Component {
   render() {
     return (
       <div className="re-navbar uk-background-primary uk-light">
-        <div className="uk-grid uk-flex-center uk-grid-collapse">
-          <div className="uk-navbar-item re-navbar-item uk-flex-center uk-flex-left@s uk-width-1-6@l uk-width-1-4@m uk-width-1-4">
+        <div className="uk-grid uk-flex-center@s uk-grid-collapse">
+          <div className="uk-navbar-item re-navbar-item uk-flex-left uk-width-1-6@l uk-width-1-4@m uk-width-1-4">
             <a href="#" data-uk-toggle="target: #re-nav-offcanvas" className="uk-logo uk-hidden@s">
               <img src={logo} alt="logo" className="re-logo" />
             </a>
@@ -29,10 +29,7 @@ class Navbar extends Component {
             <button className="uk-offcanvas-close uk-close uk-icon uk-light" type="button" data-uk-close />
             <ul className="uk-nav uk-nav-default">
               <li className="uk-nav-header">Remindre</li>
-              <div className="">
-                <SearchbarContainer />
-              </div>
-              <li className="uk-nav-divider" />
+              <li><SearchbarContainer /></li>
               <li className="uk-nav-header">Settings</li>
               <li><a href="#">Help &amp; support</a></li>
               <li><a href="#">Settings</a></li>
