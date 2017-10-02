@@ -5,7 +5,7 @@ import './Label.css'
 class Label extends Component {
   render() {
     return (
-      <span className="uk-label re-label uk-margin-small-left">{this.props.title}</span>
+      <span className="re-label uk-label uk-margin-small-left">{this.props.data.title}</span>
     )
   }
 }

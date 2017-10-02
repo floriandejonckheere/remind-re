@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import moment from 'moment'
 import PropTypes from 'prop-types'
 
-import Label from 'components/list/label/Label'
+import LabelContainer from 'components/list/label/LabelContainer'
 
 import './Entry.css'
 
@@ -29,8 +29,8 @@ class Entry extends Component {
               <div className="uk-flex uk-flex-middle">
                 <p className="uk-text-meta uk-margin-remove-top">
                   {moment(this.props.data.due).fromNow()}
-                  {this.props.labels.map(l => (
-                    <Label {...l} />
+                  {this.props.data.labels.map(id => (
+                    <LabelContainer id={id} />
                   ))}
                 </p>
               </div>

@@ -1,21 +1,19 @@
 import { connect } from 'react-redux'
 
-import { deleteReminder } from 'actions/ActionCreators'
-import Entry from 'components/list/entry/Entry'
+import Label from 'components/list/label/Label'
 
 function mapStateToProps(state, ownProps) {
-  return {}
+  return {
+    data: state.labels.labels[ownProps.id]
+  }
 }
 
 function mapDispatchToProps(dispatch, ownProps) {
   return {
-    onClickDelete: () => {
-      dispatch(deleteReminder(ownProps.data.id))
-    }
   }
 }
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(Entry)
+)(Label)
