@@ -15,6 +15,10 @@ function setFilter(state, action) {
   });
 }
 
+function clearFilter(state, action) {
+  return Immutable.merge(state, initialState)
+}
+
 /**
  * Set a filter
  * @param state
@@ -24,6 +28,8 @@ function FilterReducer(state = initialState, action) {
   switch (action.type) {
     case ActionTypes.SET_FILTER:
       return setFilter(state, action)
+    case ActionTypes.CLEAR_FILTER:
+      return clearFilter(state, action)
     default:
       return state
   }

@@ -2,6 +2,7 @@ import { connect } from 'react-redux'
 import moment from 'moment'
 
 import * as Constants from 'actions/Constants'
+import { clearFilter } from 'actions/ActionCreators'
 import List from 'components/list/List'
 
 function filterByDate(list, filter) {
@@ -47,31 +48,36 @@ function mapStateToProps(state) {
       return {
         reminders: filterByDate(state.reminders.reminders, state.filter.filter),
         title: title,
+        clearable: (state.filter.filter !== Constants.FILTER_ALL),
       }
       break
     case Constants.LABEL_FILTER:
       return {
         reminders: filterByLabel(state.reminders.reminders, state.filter.filter),
         title: `Label '${state.labels.labels[state.filter.filter].title}'`,
+        clearable: true,
       }
       break
     case Constants.TEXT_FILTER:
       return {
         reminders: filterByText(state.reminders.reminders, state.filter.filter),
         title: `Search query '${state.filter.filter}'`,
+        clearable: true,
       }
       break
     default:
       return {
         reminders: state.reminders.reminders,
         title: `Unknown filter: ${state.filter.filterType}: ${state.filter.filter}`,
+        clearable: true,
       }
   }
 }
 
 function mapDispatchToProps(dispatch, ownProps) {
   return {
-    onClick: () => {
+    onClickClear: () => {
+      dispatch(clearFilter())
     }
   }
 }

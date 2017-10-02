@@ -6,6 +6,7 @@ export const DELETE_LABEL = 'DELETE_LABEL'
 export const UPDATE_LABEL = 'UPDATE_LABEL'
 
 export const SET_FILTER = 'SET_FILTER'
+export const CLEAR_FILTER = 'CLEAR_FILTER'
 
 export const SET_SELECTION = 'SET_SELECTION'
 export const CLEAR_SELECTION = 'CLEAR_SELECTION'

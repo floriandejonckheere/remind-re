@@ -67,6 +67,12 @@ export function setFilter(filterType, filter) {
   }
 }
 
+export function clearFilter() {
+  return {
+    type: ActionTypes.CLEAR_FILTER,
+  }
+}
+
 /**
  * App actions
  *

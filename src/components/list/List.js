@@ -10,6 +10,16 @@ class List extends Component {
     return (
       <div className="re-reminder-list uk-padding uk-height-1-1" data-uk-height-viewport="expand: true">
         <strong>{this.props.title}</strong>
+        {this.props.clearable && (
+          <a
+            href="#"
+            onClick={this.props.onClickClear}
+            title="Clear filter"
+            className="uk-margin-small-left"
+            data-uk-icon="icon: close"
+            data-uk-tooltip
+          />
+        )}
         <ul className="uk-list uk-list-divider">
           {this.props.reminders.map(reminder => (
             <EntryContainer
