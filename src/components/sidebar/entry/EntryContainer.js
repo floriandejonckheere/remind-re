@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 
-import { setFilter, deleteLabel } from 'actions/ActionCreators'
+import { setFilter, deleteLabel, updateLabel } from 'actions/ActionCreators'
 import Entry from 'components/sidebar/entry/Entry'
 
 function mapStateToProps(state, ownProps) {
@@ -16,6 +16,9 @@ function mapDispatchToProps(dispatch, ownProps) {
     },
     onClickDelete: (id) => {
       dispatch(deleteLabel(ownProps.filter))
+    },
+    onChange: (e) => {
+      dispatch(updateLabel(ownProps.filter, e.target.value))
     },
   }
 }

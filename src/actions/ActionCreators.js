@@ -47,6 +47,14 @@ export function deleteLabel(id) {
   }
 }
 
+export function updateLabel(id, title) {
+  return {
+    type: ActionTypes.UPDATE_LABEL,
+    id: id,
+    title: title,
+  }
+}
+
 /**
  * Filter actions
  *

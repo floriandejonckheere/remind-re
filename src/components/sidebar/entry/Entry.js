@@ -9,6 +9,7 @@ class Entry extends Component {
 
     this.state = { editing: false }
     this.onClickEdit = this.onClickEdit.bind(this)
+    // this.onChange = this.onChange.bind(this)
   }
 
   render() {
@@ -29,12 +30,15 @@ class Entry extends Component {
           </div>
         )}
         {this.state.editing ? (
-          <input
-            type="text"
-            className="uk-input uk-form-small"
-            value={this.props.children}
-            autoFocus
-          />
+          <form onSubmit={this.onClickEdit}>
+            <input
+              type="text"
+              className="uk-input uk-form-small"
+              value={this.props.children}
+              onChange={this.props.onChange}
+              autoFocus
+            />
+          </form>
         ) : (
           <a
             href="#"
@@ -50,6 +54,11 @@ class Entry extends Component {
   onClickEdit() {
     this.setState({ editing: !this.state.editing })
   }
+
+  // onChange(e) {
+  //   this.onClickEdit()
+  //   this.props.onChange(this.props.filter, e.target.elements[0].value)
+  // }
 }
 
 Entry.propTypes = {
@@ -58,6 +67,7 @@ Entry.propTypes = {
   updatable: PropTypes.bool,
   onClick: PropTypes.func.isRequired,
   onClickDelete: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
 }
 
 export default Entry

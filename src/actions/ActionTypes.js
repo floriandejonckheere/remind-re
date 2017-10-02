@@ -3,6 +3,7 @@ export const DELETE_REMINDER = 'DELETE_REMINDER'
 
 export const CREATE_LABEL = 'CREATE_LABEL'
 export const DELETE_LABEL = 'DELETE_LABEL'
+export const UPDATE_LABEL = 'UPDATE_LABEL'
 
 export const SET_FILTER = 'SET_FILTER'
 
