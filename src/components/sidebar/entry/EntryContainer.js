@@ -20,7 +20,9 @@ function mapDispatchToProps(dispatch, ownProps) {
       dispatch(deleteLabel(ownProps.filter))
     },
     onChange: (e) => {
-      dispatch(updateLabel(ownProps.filter, e.target.value))
+      dispatch(updateLabel(ownProps.filter, {
+        title: e.target.value
+      }))
     },
   }
 }

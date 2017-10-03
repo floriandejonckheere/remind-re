@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 
-import { deleteReminder } from 'actions/ActionCreators'
+import { updateReminder, deleteReminder } from 'actions/ActionCreators'
 import Entry from 'components/list/entry/Entry'
 
 function mapStateToProps(state, ownProps) {
@@ -11,6 +11,11 @@ function mapDispatchToProps(dispatch, ownProps) {
   return {
     onClickDelete: () => {
       dispatch(deleteReminder(ownProps.data.id))
+    },
+    onChange: (e) => {
+      dispatch(updateReminder(ownProps.data.id, {
+        title: e.target.elements[0].value,
+      }))
     }
   }
 }

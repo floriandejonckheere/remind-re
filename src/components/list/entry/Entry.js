@@ -12,6 +12,7 @@ class Entry extends Component {
 
     this.state = { editing: false }
     this.onClickEdit = this.onClickEdit.bind(this)
+    this.onClickSubmit = this.onClickSubmit.bind(this)
   }
 
   render() {
@@ -20,14 +21,14 @@ class Entry extends Component {
         <div className="uk-grid">
           <div className="uk-width-expand">
             {this.state.editing ? (
-              <form className="uk-margin-top" onSubmit={this.onClickEdit}>
+              <form className="uk-margin-top" onSubmit={this.onClickSubmit}>
                 <div className="uk-margin">
                   <input
                     type="text"
                     className="uk-input"
                     placeholder="Reminder name"
-                    value={this.props.data.title}
-                    onChange={this.props.onChangeTitle}
+                    name="title"
+                    defaultValue={this.props.data.title}
                     autoFocus
                   />
                 </div>
@@ -36,6 +37,7 @@ class Entry extends Component {
                     type="text"
                     className="uk-input uk-form-small"
                     placeholder="Schedule"
+                    name="schedule"
                   />
                 </div>
 
@@ -87,6 +89,14 @@ class Entry extends Component {
 
   onClickEdit() {
     this.setState({ editing: !this.state.editing })
+  }
+
+  onClickSubmit(e) {
+    // Hide form
+    this.onClickEdit()
+
+    // Update entry
+    this.props.onChange(e)
   }
 }
 
