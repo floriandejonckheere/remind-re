@@ -9,6 +9,15 @@ class List extends Component {
   render() {
     return (
       <div className="re-reminder-list uk-padding uk-height-1-1" data-uk-height-viewport="expand: true">
+        <div className="uk-float-right">
+          <a
+            href="#"
+            className="uk-icon uk-button"
+            title="Add a reminder"
+            data-uk-icon="icon: plus"
+            data-uk-tooltip
+          />
+        </div>
         <strong>
           {this.props.title}
           {this.props.clearable && (
@@ -32,11 +41,6 @@ class List extends Component {
           {this.props.reminders.length === 0 && (
             <li data-uk-alert>No reminders matched your query</li>
           )}
-          <li>
-            <a href="#" className="uk-text-primary" data-uk-toggle="target: #modal-add-reminder">
-              <span className="uk-button" data-uk-icon="icon: plus" />add reminder
-            </a>
-          </li>
         </ul>
       </div>
     )
