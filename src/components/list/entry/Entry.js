@@ -86,18 +86,20 @@ class Entry extends Component {
               </div>
             )}
           </div>
-          <div className="uk-flex uk-flex-middle uk-visible@m">
-            <a
-              href="#"
-              className="re-more-icon uk-float-right uk-button"
-              data-uk-icon="icon: more; ratio: .8" />
-            <div className="uk-nav uk-dropdown-nav uk-padding-small" data-uk-dropdown="mode: click; pos: bottom-left">
-              <ul className="uk-nav uk-nav-default">
-                <li><a href="#" onClick={this.onClickEdit}><span className="uk-link-icon" data-uk-icon="icon: pencil" /> Edit</a></li>
-                <li><a href="#" onClick={this.props.onClickDelete}><span className="uk-link-icon" data-uk-icon="icon: trash" /> Delete</a></li>
-              </ul>
+          {this.state.editing || (
+            <div className="uk-flex uk-flex-middle uk-visible@m">
+              <a
+                href="#"
+                className="re-more-icon uk-float-right uk-button"
+                data-uk-icon="icon: more; ratio: .8" />
+              <div className="uk-nav uk-dropdown-nav uk-padding-small" data-uk-dropdown="mode: click; pos: bottom-left">
+                <ul className="uk-nav uk-nav-default">
+                  <li><a href="#" onClick={this.onClickEdit}><span className="uk-link-icon" data-uk-icon="icon: pencil" /> Edit</a></li>
+                  <li><a href="#" onClick={this.props.onClickDelete}><span className="uk-link-icon" data-uk-icon="icon: trash" /> Delete</a></li>
+                </ul>
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </li>
     )
