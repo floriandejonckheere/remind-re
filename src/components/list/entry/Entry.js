@@ -3,6 +3,7 @@ import moment from 'moment'
 import PropTypes from 'prop-types'
 
 import LabelContainer from 'components/list/label/LabelContainer'
+import LabelToggleContainer from 'components/list/labeltoggle/LabelToggleContainer'
 
 import './Entry.css'
 
@@ -39,6 +40,17 @@ class Entry extends Component {
                     placeholder="Schedule"
                     name="schedule"
                   />
+                </div>
+
+                <div className="uk-margin">
+                  {this.props.labels.map(l => (
+                    <LabelToggleContainer
+                      id={l.id}
+                      key={l.id}
+                      active={this.props.data.labels.includes(l.id)}
+                      onClick={this.props.onChangeLabel}
+                    />
+                  ))}
                 </div>
 
                 <input type="submit" className="uk-hidden" />

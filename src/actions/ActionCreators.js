@@ -26,6 +26,22 @@ export function updateReminder(id, data) {
   }
 }
 
+export function assignLabel(id, labelId) {
+  return {
+    type: ActionTypes.ASSIGN_LABEL,
+    id,
+    labelId,
+  }
+}
+
+export function unassignLabel(id, labelId) {
+  return {
+    type: ActionTypes.UNASSIGN_LABEL,
+    id,
+    labelId,
+  }
+}
+
 /**
  * Label actions
  *

@@ -1,10 +1,12 @@
 import { connect } from 'react-redux'
 
-import { updateReminder, deleteReminder } from 'actions/ActionCreators'
+import { updateReminder, deleteReminder, assignLabel, unassignLabel } from 'actions/ActionCreators'
 import Entry from 'components/list/entry/Entry'
 
 function mapStateToProps(state, ownProps) {
-  return {}
+  return {
+    labels: state.labels.labels,
+  }
 }
 
 function mapDispatchToProps(dispatch, ownProps) {
@@ -16,6 +18,15 @@ function mapDispatchToProps(dispatch, ownProps) {
       dispatch(updateReminder(ownProps.data.id, {
         title: e.target.elements[0].value,
       }))
+    },
+    onChangeLabel: (labelId) => {
+
+      console.log(labelId)
+      console.log(ownProps.data.labels)
+
+      if (ownProps.data.labels.includes(labelId)) {
+        dispatch(unassignLabel(ownProps.data.id, labelId))
+      } else dispatch(assignLabel(ownProps.data.id, labelId))
     }
   }
 }

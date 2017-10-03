@@ -50,8 +50,6 @@ function updateReminder(state, action) {
       if (r.id !== action.id)
         return r
 
-      console.log(action.data)
-
       return {
         ...r,
         ...action.data,
@@ -79,6 +77,51 @@ function deleteLabel(state, action) {
 }
 
 /**
+ * Assign a label
+ * @param state
+ * @param action
+ */
+function assignLabel(state, action) {
+  return {
+    ...state,
+    reminders: state.reminders.map(r => {
+      if (r.id !== action.id)
+        return r
+
+      return {
+        ...r,
+        labels: [
+          ...r.labels,
+          action.labelId
+        ]
+      }
+    }),
+  }
+}
+
+/**
+ * Unassign a label
+ * @param state
+ * @param action
+ */
+function unassignLabel(state, action) {
+  return {
+    ...state,
+    reminders: state.reminders.map(r => {
+      if (r.id !== action.id)
+        return r
+
+      console.log(`Removing ${action.labelId} from ${r.labels}: ${r.labels.filter(l => l.id === action.labelId)}`)
+
+      return {
+        ...r,
+        labels: r.labels.filter(l => l !== action.labelId),
+      }
+    }),
+  }
+}
+
+/**
  * Reminder reducer
  * @param state
  * @param action
@@ -94,6 +137,10 @@ function ReminderReducer(state = initialState, action) {
       return updateReminder(state, action)
     case ActionTypes.DELETE_LABEL:
       return deleteLabel(state, action)
+    case ActionTypes.ASSIGN_LABEL:
+      return assignLabel(state, action)
+    case ActionTypes.UNASSIGN_LABEL:
+      return unassignLabel(state, action)
     default:
       return state
   }

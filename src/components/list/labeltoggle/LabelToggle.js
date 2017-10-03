@@ -8,8 +8,9 @@ class LabelToggle extends Component {
     return (
       <a
         href="#"
-        className="uk-margin">
-        <span className="re-label uk-label uk-background-secondary uk-margin-small-left">{this.props.data.title}</span>
+        className="uk-margin"
+        onClick={() => this.props.onClick(this.props.id)}>
+        <span className={`re-label uk-label ${this.props.active ? 'uk-background-secondary' : 'uk-background-muted'} uk-margin-small-left`}>{this.props.data.title}</span>
       </a>
     )
   }
