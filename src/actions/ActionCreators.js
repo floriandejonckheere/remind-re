@@ -7,16 +7,7 @@ import * as ActionTypes from 'actions/ActionTypes'
 export function createReminder(props) {
   return {
     type: ActionTypes.CREATE_REMINDER,
-    data: {
-      title: props.title,
-      active: true,
-      standalone: false,
-      due: props.due,
-      recurring: Boolean(props.interval),
-      interval: props.interval,
-      labels: props.labels,
-      alerts: props.alerts,
-    }
+    ...props,
   }
 }
 
@@ -24,6 +15,14 @@ export function deleteReminder(id) {
   return {
     type: ActionTypes.DELETE_REMINDER,
     id: id,
+  }
+}
+
+export function updateReminder(id, props) {
+  return {
+    type: ActionTypes.UPDATE_REMINDER,
+    id: id,
+    ...props,
   }
 }
 
