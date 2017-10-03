@@ -33,6 +33,7 @@ class Entry extends Component {
             <input
               type="text"
               className="uk-input uk-form-small"
+              placeholder="Label name"
               value={this.props.children}
               onChange={this.props.onChange}
               autoFocus
