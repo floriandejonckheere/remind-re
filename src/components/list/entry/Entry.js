@@ -43,6 +43,12 @@ class Entry extends Component {
                 </div>
 
                 <div className="uk-margin">
+                  <input
+                    type="submit"
+                    value="save"
+                    className="uk-button uk-button-small uk-button-primary uk-float-right"
+                  />
+
                   {this.props.labels.map(l => (
                     <LabelToggleContainer
                       id={l.id}
@@ -52,8 +58,6 @@ class Entry extends Component {
                     />
                   ))}
                 </div>
-
-                <input type="submit" className="uk-hidden" />
               </form>
             ) : (
               <div>
