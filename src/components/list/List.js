@@ -11,7 +11,7 @@ class List extends Component {
       <div className="re-reminder-list uk-padding uk-height-1-1" data-uk-height-viewport="expand: true">
         <div className="uk-float-right">
           <a
-            href="#"
+           
             className="uk-icon uk-button"
             title="Add a reminder"
             data-uk-icon="icon: plus"
@@ -23,7 +23,7 @@ class List extends Component {
           {this.props.title}
           {this.props.clearable && (
             <a
-              href="#"
+             
               onClick={this.props.onClickClear}
               title="Clear filter"
               className="uk-margin-small-left uk-icon-link"
