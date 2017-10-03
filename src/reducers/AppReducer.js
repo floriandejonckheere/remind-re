@@ -1,10 +1,8 @@
-import Immutable from 'seamless-immutable'
-
 import * as ActionTypes from 'actions/ActionTypes'
 
-const initialState = Immutable({
+const initialState = {
   selection: [],
-})
+}
 
 /**
  * Set selection
@@ -13,9 +11,10 @@ const initialState = Immutable({
  * @returns {*}
  */
 function setSelection(state, action) {
-  return Immutable.merge(state, {
+  return {
+    ...state,
     selection: action.selection,
-  })
+  }
 }
 
 /**
@@ -24,9 +23,10 @@ function setSelection(state, action) {
  * @param action
  */
 function clearSelection(state) {
-  return Immutable.merge(state, {
+  return {
+    ...state,
     selection: [],
-  })
+  }
 }
 
 /**

@@ -1,22 +1,24 @@
-import Immutable from 'seamless-immutable'
-
 import * as Constants from 'actions/Constants'
 import * as ActionTypes from 'actions/ActionTypes'
 
-const initialState = Immutable({
+const initialState = {
   filterType: Constants.DATE_FILTER,
   filter: Constants.FILTER_ALL,
-})
+}
 
 function setFilter(state, action) {
-  return Immutable.merge(state, {
+  return {
+    ...state,
     filterType: action.filterType,
     filter: action.filter,
-  });
+  }
 }
 
 function clearFilter(state, action) {
-  return Immutable.merge(state, initialState)
+  return {
+    ...state,
+    ...initialState
+  }
 }
 
 /**

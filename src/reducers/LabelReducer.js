@@ -1,12 +1,10 @@
-import Immutable from 'seamless-immutable'
-
 import labels from 'data/labels'
 import * as ActionTypes from 'actions/ActionTypes'
 
-const initialState = Immutable({
+const initialState = {
   labelId: 1,
   labels: labels
-})
+}
 
 /**
  * Add a label
@@ -16,13 +14,17 @@ const initialState = Immutable({
 function createLabel(state, action) {
   let id = state.labelId + 1
 
-  return Immutable.merge(state, {
+  return {
+    ...state,
     labelId: id,
-    labels: [...state.labels, {
-      id: id,
-      title: action.title,
-    }],
-  })
+    labels: [
+      ...state.labels,
+      {
+        id: id,
+        ...action.data,
+      }
+    ],
+  }
 }
 
 /**
@@ -31,9 +33,10 @@ function createLabel(state, action) {
  * @param action
  */
 function deleteLabel(state, action) {
-  return Immutable.merge(state, {
-    labels: state.labels.filter(r => r.id !== action.id)
-  })
+  return {
+    ...state,
+    labels: state.labels.filter(l => l.id !== action.id),
+  }
 }
 
 /**
@@ -42,16 +45,18 @@ function deleteLabel(state, action) {
  * @param action
  */
 function updateLabel(state, action) {
-  return Immutable.merge(state, {
+  return {
+    ...state,
     labels: state.labels.map(l => {
       if (l.id !== action.id)
         return l
 
-      return l.merge({
-        title: action.title,
-      })
-    })
-  })
+      return {
+        ...l,
+        ...action.data,
+      }
+    }),
+  }
 }
 
 /**

@@ -1,5 +1,3 @@
-import Immutable from 'seamless-immutable'
-
 import reminders from 'data/reminders'
 import * as ActionTypes from 'actions/ActionTypes'
 
@@ -14,12 +12,16 @@ const initialState = {
  * @param action
  */
 function createReminder(state, action) {
+  let id = state.reminderId + 1
   return {
     ...state,
-    reminderId: state.reminderId + 1,
+    reminderId: id,
     reminders: [
       ...state.reminders,
-      { ...action.data },
+      {
+        id: id,
+        ...action.data,
+      },
     ]
   }
 }
@@ -48,9 +50,11 @@ function updateReminder(state, action) {
       if (r.id !== action.id)
         return r
 
+      console.log(action.data)
+
       return {
         ...r,
-        title: action.title,
+        ...action.data,
       }
     }),
   }
@@ -62,10 +66,16 @@ function updateReminder(state, action) {
  * @param action
  */
 function deleteLabel(state, action) {
-  return Immutable.merge(state, {
-    // Remove label from reminders
-    reminders: state.reminders.map(r => Immutable(r).merge({ labels: r.labels.filter(l => l !== action.id) }))
-  })
+  // Remove label from reminders
+  return {
+    ...state,
+    reminders: state.reminders.map(r => {
+      return {
+        ...r,
+        labels: r.labels.filter(l => l !== action.id),
+      }
+    }),
+  }
 }
 
 /**

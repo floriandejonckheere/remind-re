@@ -4,25 +4,25 @@ import * as ActionTypes from 'actions/ActionTypes'
  * Reminder actions
  *
  */
-export function createReminder(props) {
+export function createReminder(data) {
   return {
     type: ActionTypes.CREATE_REMINDER,
-    ...props,
+    data,
   }
 }
 
 export function deleteReminder(id) {
   return {
     type: ActionTypes.DELETE_REMINDER,
-    id: id,
+    id,
   }
 }
 
-export function updateReminder(id, props) {
+export function updateReminder(id, data) {
   return {
     type: ActionTypes.UPDATE_REMINDER,
-    id: id,
-    ...props,
+    id,
+    data,
   }
 }
 
@@ -30,25 +30,25 @@ export function updateReminder(id, props) {
  * Label actions
  *
  */
-export function createLabel(props) {
+export function createLabel(data) {
   return {
     type: ActionTypes.CREATE_LABEL,
-    title: props.title,
+    data,
   }
 }
 
 export function deleteLabel(id) {
   return {
     type: ActionTypes.DELETE_LABEL,
-    id: id,
+    id,
   }
 }
 
-export function updateLabel(id, title) {
+export function updateLabel(id, data) {
   return {
     type: ActionTypes.UPDATE_LABEL,
-    id: id,
-    title: title,
+    id,
+    data,
   }
 }
 
