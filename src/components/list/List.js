@@ -16,6 +16,7 @@ class List extends Component {
             title="Add a reminder"
             data-uk-icon="icon: plus"
             data-uk-tooltip
+            onClick={this.props.onClickAdd}
           />
         </div>
         <strong>

@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 import moment from 'moment'
 
 import * as Constants from 'actions/Constants'
-import { clearFilter } from 'actions/ActionCreators'
+import { clearFilter, createReminder } from 'actions/ActionCreators'
 import List from 'components/list/List'
 
 function filterByDate(list, filter) {
@@ -75,7 +75,13 @@ function mapDispatchToProps(dispatch, ownProps) {
   return {
     onClickClear: () => {
       dispatch(clearFilter())
-    }
+    },
+    onClickAdd: function() {
+      dispatch(createReminder({
+        title: 'New reminder',
+        labels: [],
+      }))
+    },
   }
 }
 

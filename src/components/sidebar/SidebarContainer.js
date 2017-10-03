@@ -13,7 +13,7 @@ function mapDispatchToProps(dispatch, ownProps) {
   return {
     onClickAdd: function() {
       dispatch(createLabel({ title: 'new label' }))
-    }
+    },
   }
 }
 
