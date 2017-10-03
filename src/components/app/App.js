@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import './App.css'
 
-import SidebarContainer from 'components/sidebar/SidebarContainer'
+import Sidebar from 'components/sidebar/Sidebar'
 import Navbar from 'components/navbar/Navbar'
 import ListContainer from 'components/list/ListContainer'
 
@@ -50,7 +50,7 @@ class App extends Component {
 
         <div className="re-app-content uk-grid uk-flex-center uk-grid-collapse">
           <div className="uk-width-1-6@l uk-width-1-4@m">
-            <SidebarContainer />
+            <Sidebar />
           </div>
           <div className="uk-width-1-3@l uk-width-1-2@m">
             <ListContainer />

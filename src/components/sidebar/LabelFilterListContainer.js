@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 
 import { createLabel } from 'actions/ActionCreators'
-import Sidebar from 'components/sidebar/Sidebar'
+import LabelFilterList from 'components/sidebar/LabelFilterList'
 
 function mapStateToProps(state, ownProps) {
   return {
@@ -20,4 +20,4 @@ function mapDispatchToProps(dispatch, ownProps) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(Sidebar)
+)(LabelFilterList)
