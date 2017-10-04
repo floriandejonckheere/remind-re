@@ -1,7 +1,5 @@
 import { connect } from 'react-redux'
 
-import * as Contants from 'actions/Constants'
-import { setFilter } from 'actions/ActionCreators'
 import Label from 'components/list/label/Label'
 
 function mapStateToProps(state, ownProps) {
@@ -11,8 +9,7 @@ function mapStateToProps(state, ownProps) {
 }
 
 function mapDispatchToProps(dispatch, ownProps) {
-  return {
-  }
+  return {}
 }
 
 export default connect(
