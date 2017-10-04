@@ -8,6 +8,7 @@ import ListContainer from 'components/list/ListContainer'
 
 import AddModal from 'components/modal/reminders/AddModal'
 import DeleteModal from 'components/modal/reminders/DeleteModal'
+import FullModal from 'components/modal/FullModal'
 
 import reminderModalHOC from 'components/modal/reminders/ReminderModalHOC'
 
@@ -59,6 +60,7 @@ class App extends Component {
 
         <AddModalHOC />
         <DeleteModalHOC />
+        <FullModal />
       </div>
     );
   }
