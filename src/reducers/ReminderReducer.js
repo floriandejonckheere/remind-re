@@ -111,8 +111,6 @@ function unassignLabel(state, action) {
       if (r.id !== action.id)
         return r
 
-      console.log(`Removing ${action.labelId} from ${r.labels}: ${r.labels.filter(l => l.id === action.labelId)}`)
-
       return {
         ...r,
         labels: r.labels.filter(l => l !== action.labelId),
