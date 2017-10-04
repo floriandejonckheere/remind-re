@@ -33,7 +33,7 @@ class FilterEntry extends Component {
               type="text"
               className="uk-input uk-form-small"
               placeholder="Label name"
-              value={this.props.children}
+              value={this.props.title}
               onChange={this.props.onChange}
               autoFocus
             />
@@ -42,7 +42,7 @@ class FilterEntry extends Component {
           <a
             className="uk-margin"
             onClick={this.props.onClick}>
-            {this.props.children}
+            {this.props.title}
           </a>
         )}
       </li>
@@ -56,7 +56,7 @@ class FilterEntry extends Component {
 
 FilterEntry.propTypes = {
   active: PropTypes.bool.isRequired,
-  children: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
   updatable: PropTypes.bool,
   onClick: PropTypes.func.isRequired,
   onClickDelete: PropTypes.func.isRequired,

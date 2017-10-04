@@ -7,15 +7,21 @@ class DateFilterList extends Component {
   render() {
     return (
       <ul className="uk-nav uk-nav-default">
-        <FilterEntryContainer filter={Constants.FILTER_ALL} filterType={Constants.DATE_FILTER}>
-          all reminders
-        </FilterEntryContainer>
-        <FilterEntryContainer filter={Constants.FILTER_UPCOMING} filterType={Constants.DATE_FILTER}>
-          upcoming
-        </FilterEntryContainer>
-        <FilterEntryContainer filter={Constants.FILTER_NEXT_WEEK} filterType={Constants.DATE_FILTER}>
-          next week
-        </FilterEntryContainer>
+        <FilterEntryContainer
+          filter={Constants.FILTER_ALL}
+          filterType={Constants.DATE_FILTER}
+          title="all reminders"
+        />
+        <FilterEntryContainer
+          filter={Constants.FILTER_UPCOMING}
+          filterType={Constants.DATE_FILTER}
+          title="upcoming"
+        />
+        <FilterEntryContainer
+          filter={Constants.FILTER_NEXT_WEEK}
+          filterType={Constants.DATE_FILTER}
+          title="next week"
+        />
       </ul>
     )
   }

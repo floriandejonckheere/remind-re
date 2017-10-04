@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 import * as Constants from 'actions/Constants'
 import FilterEntryContainer from 'components/filterlist/filterentry/FilterEntryContainer'
@@ -12,9 +13,9 @@ class LabelFilterList extends Component {
             filter={label.id}
             key={label.id}
             filterType={Constants.LABEL_FILTER}
-            updatable>
-              {label.title}
-          </FilterEntryContainer>
+            updatable
+            title={label.title}
+          />
         ))}
         <li>
           <a
@@ -26,6 +27,15 @@ class LabelFilterList extends Component {
       </ul>
     )
   }
+}
+
+LabelFilterList.propTypes = {
+  labels: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+    }).isRequired,
+  ).isRequired,
 }
 
 export default LabelFilterList
