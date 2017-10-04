@@ -10,7 +10,9 @@ class AlertModal extends Component {
           <button className="uk-modal-close-full uk-close-large" type="button" data-uk-close />
           <div className="uk-grid-collapse uk-flex-middle uk-height-viewport" data-uk-grid>
             <div className="uk-background-cover uk-visible@m uk-width-1-2@m" style={{backgroundImage: `url(${background})`}} data-uk-height-viewport>
-              <a href="https://unsplash.com/photos/ukxAK0c2FqM">&copy; @alisaanton</a>
+              <div className="uk-light uk-text-center uk-text-small">
+                <a href="https://unsplash.com/photos/ukxAK0c2FqM">&copy; @alisaanton</a>
+              </div>
             </div>
             <div className="uk-padding-large uk-width-1-1@s uk-width-1-2@m">
               <h1>Hand in assignment 1</h1>
