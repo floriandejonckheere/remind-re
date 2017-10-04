@@ -1,6 +1,18 @@
 .re-reminder-list {
+  position: relative;
+
+  /* Space for footer */
+  padding-bottom: 100px;
+
   background: white;
 
   border-left: 1px solid darken(white, 10%);
   border-right: 1px solid darken(white, 10%);
+}
+
+.re-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }

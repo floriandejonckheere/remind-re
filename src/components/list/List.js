@@ -11,7 +11,7 @@ class List extends Component {
       <div className="re-reminder-list uk-padding uk-height-1-1" data-uk-height-viewport="expand: true">
         <div className="uk-float-right">
           <a
-           
+
             className="uk-icon uk-button"
             title="Add a reminder"
             data-uk-icon="icon: plus"
@@ -23,7 +23,7 @@ class List extends Component {
           {this.props.title}
           {this.props.clearable && (
             <a
-             
+
               onClick={this.props.onClickClear}
               title="Clear filter"
               className="uk-margin-small-left uk-icon-link"
@@ -43,6 +43,10 @@ class List extends Component {
             <li data-uk-alert>No reminders matched your query</li>
           )}
         </ul>
+
+        <footer className="re-footer uk-text-center uk-padding uk-padding-remove-horizontal uk-text-small">
+          &copy; 2017 Florian Dejonckheere
+        </footer>
       </div>
     )
   }
