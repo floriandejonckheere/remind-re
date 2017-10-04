@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import SearchbarContainer from 'components/navbar/searchbar/SearchbarContainer'
+import SettingsContainer from 'components/settings/SettingsContainer'
 
 import './Navbar.css'
 
@@ -9,7 +10,7 @@ import logo from 'components/navbar/logo.svg'
 class Navbar extends Component {
   render() {
     return (
-      <div className="re-navbar uk-background-primary uk-light">
+      <div className="re-navbar uk-background-primary">
         <div className="uk-grid uk-flex-center@s uk-grid-collapse">
           <div className="uk-navbar-item re-navbar-item uk-flex-left uk-width-1-6@l uk-width-1-4@m uk-width-1-4">
             <a data-uk-toggle="target: #re-nav-offcanvas" className="uk-logo uk-hidden@s">
@@ -21,6 +22,7 @@ class Navbar extends Component {
           </div>
           <div className="uk-navbar-item re-navbar-item uk-width-1-3@l uk-width-1-2@m uk-width-3-4 uk-visible@s">
             <SearchbarContainer />
+            <SettingsContainer />
           </div>
         </div>
 

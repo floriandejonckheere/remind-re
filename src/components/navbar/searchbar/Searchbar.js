@@ -6,13 +6,15 @@ import './Searchbar.css'
 class Searchbar extends Component {
   render() {
     return (
-      <input
-        type="search"
-        className="uk-input uk-search-input re-searchbar"
-        placeholder="Quick search"
-        value={this.props.filter}
-        onChange={this.props.onChange}
-      />
+      <div className="uk-width-expand uk-light">
+        <input
+          type="search"
+          className="uk-input uk-search-input re-searchbar"
+          placeholder="Quick search"
+          value={this.props.filter}
+          onChange={this.props.onChange}
+        />
+      </div>
     )
   }
 }
