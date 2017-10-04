@@ -12,9 +12,6 @@ function mapStateToProps(state, ownProps) {
 
 function mapDispatchToProps(dispatch, ownProps) {
   return {
-    onClick: () => {
-      dispatch(setFilter(Contants.LABEL_FILTER, ownProps.id))
-    },
   }
 }
 

@@ -3,7 +3,6 @@ import moment from 'moment'
 import PropTypes from 'prop-types'
 
 import LabelContainer from 'components/list/label/LabelContainer'
-import LabelToggleContainer from 'components/list/labeltoggle/LabelToggleContainer'
 
 import './Entry.css'
 
@@ -50,7 +49,7 @@ class Entry extends Component {
                   />
 
                   {this.props.labels.map(l => (
-                    <LabelToggleContainer
+                    <LabelContainer
                       id={l.id}
                       key={l.id}
                       active={this.props.data.labels.includes(l.id)}
@@ -72,7 +71,12 @@ class Entry extends Component {
                     <p className="uk-text-meta uk-margin-remove-top">
                       {moment(this.props.data.due).fromNow()}
                       {this.props.data.labels.map(id => (
-                        <LabelContainer id={id} key={id} />
+                        <LabelContainer
+                          id={id}
+                          key={id}
+                          active="true"
+                          onClick={this.props.onClickLabel}
+                        />
                       ))}
                     </p>
                   </div>
