@@ -13,7 +13,7 @@ class FilterEntry extends Component {
 
   render() {
     return (
-      <li className={`re-sidebar-filter-entry ${this.props.active ? 'uk-active' : ''}`}>
+      <li className={`re-filter-entry ${this.props.active ? 'uk-active' : ''}`}>
         {(this.props.updatable && !this.state.editing) && (
           <div>
             <a

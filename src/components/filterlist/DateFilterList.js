@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import * as Constants from 'actions/Constants'
-import FilterEntryContainer from 'components/sidebar/filterentry/FilterEntryContainer'
+import FilterEntryContainer from 'components/filterlist/filterentry/FilterEntryContainer'
 
 class DateFilterList extends Component {
   render() {

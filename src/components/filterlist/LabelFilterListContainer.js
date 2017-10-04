@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 
 import { createLabel } from 'actions/ActionCreators'
-import LabelFilterList from 'components/sidebar/LabelFilterList'
+import LabelFilterList from 'components/filterlist/LabelFilterList'
 
 function mapStateToProps(state, ownProps) {
   return {
