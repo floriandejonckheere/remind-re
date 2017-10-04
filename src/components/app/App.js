@@ -6,14 +6,7 @@ import Sidebar from 'components/sidebar/Sidebar'
 import Navbar from 'components/navbar/Navbar'
 import ListContainer from 'components/list/ListContainer'
 
-import AddModal from 'components/modal/reminders/AddModal'
-import DeleteModal from 'components/modal/reminders/DeleteModal'
-import AlertModal from 'components/modal/AlertModal'
-
-import reminderModalHOC from 'components/modal/reminders/ReminderModalHOC'
-
-const AddModalHOC = reminderModalHOC(AddModal)
-const DeleteModalHOC = reminderModalHOC(DeleteModal)
+import AlertModalContainer from 'components/modal/AlertModalContainer'
 
 class App extends Component {
   constructor(props) {
@@ -58,9 +51,7 @@ class App extends Component {
           </div>
         </div>
 
-        <AddModalHOC />
-        <DeleteModalHOC />
-        <AlertModal />
+        <AlertModalContainer />
       </div>
     );
   }
