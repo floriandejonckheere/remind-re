@@ -1,8 +1,17 @@
 import React, { Component } from 'react'
+import moment from 'moment'
 
 import background from './background.jpg'
 
 class AlertModal extends Component {
+  constructor(props) {
+    super(props)
+
+    this.onSnooze = this.onSnooze.bind(this)
+    this.onDismiss = this.onDismiss.bind(this)
+  }
+
+
   render() {
     return (
       <div id="modal-full" className="uk-modal-full" data-uk-modal>
@@ -15,17 +24,29 @@ class AlertModal extends Component {
               </div>
             </div>
             <div className="uk-padding-large uk-width-1-1@s uk-width-1-2@m">
-              <h1>Hand in assignment 1</h1>
-              <p className="uk-text-meta">In 4 hours</p>
+              <h1>{this.props.reminder && this.props.reminder.title}</h1>
+              <p className="uk-text-meta">{this.props.reminder && moment(this.props.reminder.due).fromNow()}</p>
               <div className="uk-flex uk-flex-bottom uk-flex-between uk-margin-xlarge-top">
-                <a className="uk-button uk-button-large uk-button-default">snooze</a>
-                <a className="uk-button uk-button-large uk-button-danger">dismiss</a>
+                <a className="uk-button uk-button-large uk-button-default" onClick={this.onSnooze}>snooze</a>
+                <a className="uk-button uk-button-large uk-button-danger" onClick={this.onDismiss}>dismiss</a>
               </div>
             </div>
           </div>
         </div>
       </div>
     )
+  }
+
+  onSnooze() {
+    window.UIkit.modal('#modal-full').hide().then(() => {
+      this.props.onSnooze();
+    })
+  }
+
+  onDismiss() {
+    window.UIkit.modal('#modal-full').hide().then(() => {
+      this.props.onDismiss();
+    })
   }
 }
 

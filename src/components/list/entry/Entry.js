@@ -78,6 +78,7 @@ class Entry extends Component {
                   </div>
                   <div className="uk-flex-right uk-hidden@m">
                     <ul className="uk-navbar-nav">
+                      <li><a title="Trigger" data-uk-icon="icon: bell" data-uk-tooltip data-uk-toggle="target: #modal-full" onClick={this.props.onClickTrigger} /></li>
                       <li><a title="Edit" data-uk-icon="icon: pencil" data-uk-tooltip onClick={this.onClickEdit} /></li>
                       <li><a title="Delete" data-uk-icon="icon: close" data-uk-tooltip onClick={this.props.onClickDelete} /></li>
                     </ul>
@@ -93,6 +94,7 @@ class Entry extends Component {
                 data-uk-icon="icon: more; ratio: .8" />
               <div className="uk-nav uk-dropdown-nav uk-padding-small" data-uk-dropdown="mode: click; pos: bottom-left">
                 <ul className="uk-nav uk-nav-default">
+                  <li><a onClick={this.props.onClickTrigger} data-uk-toggle="target: #modal-full"><span className="uk-link-icon" data-uk-icon="icon: bell" /> Trigger</a></li>
                   <li><a onClick={this.onClickEdit}><span className="uk-link-icon" data-uk-icon="icon: pencil" /> Edit</a></li>
                   <li><a onClick={this.props.onClickDelete}><span className="uk-link-icon" data-uk-icon="icon: trash" /> Delete</a></li>
                 </ul>

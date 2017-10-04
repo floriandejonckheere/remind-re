@@ -34,6 +34,7 @@ function clearSelection(state) {
  * @param action
  */
 function setAlert(state, action) {
+  console.log(action)
   return {
     ...state,
     alert: action.id,
