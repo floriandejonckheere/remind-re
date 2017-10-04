@@ -4,7 +4,7 @@ import SearchbarContainer from 'components/navbar/searchbar/SearchbarContainer'
 
 import './Navbar.css'
 
-import logo from './logo.svg'
+import logo from 'components/navbar/logo.svg'
 
 class Navbar extends Component {
   render() {
