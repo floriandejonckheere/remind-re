@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import background from './background.jpg'
 
-class FullModal extends Component {
+class AlertModal extends Component {
   render() {
     return (
       <div id="modal-full" className="uk-modal-full" data-uk-modal>
@@ -10,7 +10,7 @@ class FullModal extends Component {
           <button className="uk-modal-close-full uk-close-large" type="button" data-uk-close />
           <div className="uk-grid-collapse uk-flex-middle uk-height-viewport" data-uk-grid>
             <div className="uk-background-cover uk-visible@m uk-width-1-2@m" style={{backgroundImage: `url(${background})`}} data-uk-height-viewport>
-              &copy; @alisaanton
+              <a href="https://unsplash.com/photos/ukxAK0c2FqM">&copy; @alisaanton</a>
             </div>
             <div className="uk-padding-large uk-width-1-1@s uk-width-1-2@m">
               <h1>Hand in assignment 1</h1>
@@ -27,4 +27,4 @@ class FullModal extends Component {
   }
 }
 
-export default FullModal
+export default AlertModal
