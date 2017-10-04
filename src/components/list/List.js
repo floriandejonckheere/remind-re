@@ -45,7 +45,7 @@ class List extends Component {
         </ul>
 
         <footer className="re-footer uk-text-center uk-padding uk-padding-remove-horizontal uk-text-small">
-          &copy; 2017 Florian Dejonckheere
+          <a href="https://florian.dejonckhee.re/" className="uk-link-reset">&copy; 2017 Florian Dejonckheere</a>
         </footer>
       </div>
     )
