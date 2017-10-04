@@ -87,6 +87,24 @@ export function clearFilter() {
 }
 
 /**
+ * Alert actions
+ *
+ */
+export function setAlert(id) {
+  return {
+    type: ActionTypes.SET_ALERT,
+    id,
+  }
+}
+
+export function clearAlert(id) {
+  return {
+    type: ActionTypes.CLEAR_ALERT,
+    id,
+  }
+}
+
+/**
  * App actions
  *
  */

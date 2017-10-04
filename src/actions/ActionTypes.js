@@ -13,3 +13,6 @@ export const CLEAR_FILTER = 'CLEAR_FILTER'
 
 export const SET_SELECTION = 'SET_SELECTION'
 export const CLEAR_SELECTION = 'CLEAR_SELECTION'
+
+export const SET_ALERT = 'SET_ALERT'
+export const CLEAR_ALERT = 'CLEAR_ALERT'
