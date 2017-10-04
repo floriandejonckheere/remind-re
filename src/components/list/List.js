@@ -53,12 +53,11 @@ class List extends Component {
 }
 
 List.propTypes = {
+  title: PropTypes.string.isRequired,
   reminders: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       title: PropTypes.string.isRequired,
-      active: PropTypes.bool.isRequired,
-      standalone: PropTypes.bool.isRequired,
       due: PropTypes.number.isRequired,
       interval: PropTypes.number,
       labels: PropTypes.arrayOf(PropTypes.number),
@@ -72,6 +71,10 @@ List.propTypes = {
   ).isRequired,
   dateFilter: PropTypes.string,
   textFilter: PropTypes.string,
+  clearable: PropTypes.bool,
+
+  onClickAdd: PropTypes.func.isRequired,
+  onClickClear: PropTypes.func.isRequired,
 }
 
 export default List

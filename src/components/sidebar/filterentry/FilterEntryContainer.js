@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 
 import { setFilter, clearFilter, deleteLabel, updateLabel } from 'actions/ActionCreators'
-import Entry from 'components/sidebar/entry/Entry'
+import FilterEntry from 'components/sidebar/filterentry/FilterEntry'
 
 function mapStateToProps(state, ownProps) {
   return {
@@ -30,4 +30,4 @@ function mapDispatchToProps(dispatch, ownProps) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(Entry)
+)(FilterEntry)

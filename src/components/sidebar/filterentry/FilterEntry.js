@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import './Entry.css'
+import './FilterEntry.css'
 
-class Entry extends Component {
+class FilterEntry extends Component {
   constructor(props) {
     super(props)
 
@@ -13,7 +13,7 @@ class Entry extends Component {
 
   render() {
     return (
-      <li className={this.props.active ? 're-sidebar-label-entry uk-active' : 're-sidebar-label-entry'}>
+      <li className={`re-sidebar-filter-entry ${this.props.active ? 'uk-active' : ''}`}>
         {(this.props.updatable && !this.state.editing) && (
           <div>
             <a
@@ -54,7 +54,7 @@ class Entry extends Component {
   }
 }
 
-Entry.propTypes = {
+FilterEntry.propTypes = {
   active: PropTypes.bool.isRequired,
   children: PropTypes.string.isRequired,
   updatable: PropTypes.bool,
@@ -63,4 +63,4 @@ Entry.propTypes = {
   onChange: PropTypes.func.isRequired,
 }
 
-export default Entry
+export default FilterEntry
