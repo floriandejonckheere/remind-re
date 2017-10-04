@@ -45,7 +45,7 @@ class Entry extends Component {
                   <input
                     type="submit"
                     value="save"
-                    className="uk-button uk-button-small uk-button-primary uk-float-right"
+                    className="uk-button uk-button-small uk-button-default uk-float-right"
                   />
 
                   {this.props.labels.map(l => (
