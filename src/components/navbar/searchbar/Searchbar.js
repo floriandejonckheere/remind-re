@@ -6,7 +6,7 @@ import './Searchbar.css'
 class Searchbar extends Component {
   render() {
     return (
-      <div className="uk-width-expand uk-light">
+      <div className="uk-width-1-1 uk-light">
         <input
           type="search"
           className="uk-input uk-search-input re-searchbar"

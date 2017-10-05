@@ -31,12 +31,7 @@ class Navbar extends Component {
             <button className="uk-offcanvas-close uk-close uk-icon uk-light" type="button" data-uk-close />
             <ul className="uk-nav uk-nav-default">
               <li className="uk-nav-header">Remindre</li>
-              <li><SearchbarContainer /></li>
-              <li className="uk-nav-header">Settings</li>
-              <li><a>Help &amp; support</a></li>
-              <li><a>Settings</a></li>
-              <li className="uk-nav-divider" />
-              <li><a>Sign out</a></li>
+              <li className="uk-width-1-1"><SearchbarContainer /></li>
             </ul>
           </div>
         </div>
