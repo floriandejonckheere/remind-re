@@ -68,7 +68,7 @@ function sortReminders(state, action) {
     console.log('cannot sort partial list')
     return state
   }
-console.log(action.data)
+
   return {
     ...state,
     reminders: action.data.map(id => state.reminders.find(r => r.id === id))

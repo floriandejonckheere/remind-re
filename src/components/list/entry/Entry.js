@@ -19,12 +19,14 @@ class Entry extends Component {
     return (
       <li className="re-reminder-entry uk-padding-small">
         <div className="uk-grid">
-          <div className="uk-padding-remove">
-            <a
-              className="re-hover-icon re-drag-icon uk-float-right uk-button uk-padding-remove-right"
-              data-uk-icon="icon: menu"
-            />
-          </div>
+          {this.state.editing || (
+            <div className="uk-padding-remove">
+              <a
+                className="re-hover-icon re-drag-icon uk-float-right uk-button uk-padding-remove-right"
+                data-uk-icon="icon: menu"
+              />
+            </div>
+          )}
           <div className="uk-width-expand">
             {this.state.editing ? (
               <form className="uk-margin-top" onSubmit={this.onClickSubmit}>
