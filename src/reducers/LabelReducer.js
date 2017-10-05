@@ -11,7 +11,7 @@ const initialState = {
  * @param state
  * @param action
  */
-function createLabel(state, action) {
+function createLabel(state) {
   let id = state.labelId + 1
 
   return {
@@ -21,7 +21,7 @@ function createLabel(state, action) {
       ...state.labels,
       {
         id: id,
-        ...action.data,
+        title: 'new label',
       }
     ],
   }
@@ -68,7 +68,7 @@ function updateLabel(state, action) {
 function LabelReducer(state = initialState, action) {
   switch (action.type) {
     case ActionTypes.CREATE_LABEL:
-      return createLabel(state, action)
+      return createLabel(state)
     case ActionTypes.DELETE_LABEL:
       return deleteLabel(state, action)
     case ActionTypes.UPDATE_LABEL:

@@ -1,3 +1,5 @@
+import moment from 'moment'
+
 import reminders from 'data/reminders'
 import * as ActionTypes from 'actions/ActionTypes'
 
@@ -11,7 +13,7 @@ const initialState = {
  * @param state
  * @param action
  */
-function createReminder(state, action) {
+function createReminder(state) {
   let id = state.reminderId + 1
   return {
     ...state,
@@ -20,7 +22,9 @@ function createReminder(state, action) {
       ...state.reminders,
       {
         id: id,
-        ...action.data,
+        title: 'New reminder',
+        due: moment().unix() * 1000,
+        labels: []
       },
     ]
   }
@@ -145,7 +149,7 @@ function unassignLabel(state, action) {
 function ReminderReducer(state = initialState, action) {
   switch (action.type) {
     case ActionTypes.CREATE_REMINDER:
-      return createReminder(state, action)
+      return createReminder(state)
     case ActionTypes.DELETE_REMINDER:
       return deleteReminder(state, action)
     case ActionTypes.UPDATE_REMINDER:

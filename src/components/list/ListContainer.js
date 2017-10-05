@@ -77,10 +77,7 @@ function mapDispatchToProps(dispatch, ownProps) {
       dispatch(clearFilter())
     },
     onClickAdd: function() {
-      dispatch(createReminder({
-        title: 'New reminder',
-        labels: [],
-      }))
+      dispatch(createReminder())
     },
     onSort: function(data) {
       dispatch(sortReminders(data.map(d => d.content.props.data.id)))

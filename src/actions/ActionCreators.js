@@ -4,10 +4,9 @@ import * as ActionTypes from 'actions/ActionTypes'
  * Reminder actions
  *
  */
-export function createReminder(data) {
+export function createReminder() {
   return {
     type: ActionTypes.CREATE_REMINDER,
-    data,
   }
 }
 
@@ -53,10 +52,9 @@ export function unassignLabel(id, labelId) {
  * Label actions
  *
  */
-export function createLabel(data) {
+export function createLabel() {
   return {
     type: ActionTypes.CREATE_LABEL,
-    data,
   }
 }
 
