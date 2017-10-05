@@ -167,6 +167,21 @@ class Entry extends Component {
 // TODO: abstract reminder proptypes
 Entry.propTypes = {
   data: PropTypes.any.isRequired,
+  labels: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+    }).isRequired,
+  ),
+  edit: PropTypes.bool,
+
+  onStartEdit: PropTypes.func.isRequired,
+  onFinishEdit: PropTypes.func.isRequired,
+  onClickTrigger: PropTypes.func.isRequired,
+  onClickDelete: PropTypes.func.isRequired,
+  onClickLabel: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
+  onChangeLabel: PropTypes.func.isRequired,
 }
 
 export default Entry
