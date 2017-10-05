@@ -126,9 +126,10 @@ export function clearSelection(selection) {
   }
 }
 
-export function setEdit(id) {
+export function setEdit(id, editType) {
   return {
     type: ActionTypes.SET_EDIT,
+    editType,
     id,
   }
 }

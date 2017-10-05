@@ -17,14 +17,14 @@ import Entry from 'components/list/entry/Entry'
 function mapStateToProps(state, ownProps) {
   return {
     labels: state.labels.labels,
-    edit: state.app.edit === ownProps.data.id,
+    edit: state.app.editType === Constants.REMINDER_EDIT && state.app.edit === ownProps.data.id,
   }
 }
 
 function mapDispatchToProps(dispatch, ownProps) {
   return {
     onStartEdit: () => {
-      dispatch(setEdit(ownProps.data.id))
+      dispatch(setEdit(ownProps.data.id, Constants.REMINDER_EDIT))
     },
     onFinishEdit: () => {
       dispatch(clearEdit())

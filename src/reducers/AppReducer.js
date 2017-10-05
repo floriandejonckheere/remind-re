@@ -1,9 +1,11 @@
 import * as ActionTypes from 'actions/ActionTypes'
+import * as Constants from 'actions/Constants'
 
 const initialState = {
   selection: [],
   alert: null,
   edit: null,
+  editType: null,
 }
 
 /**
@@ -61,6 +63,7 @@ function setEdit(state, action) {
   return {
     ...state,
     edit: action.id,
+    editType: action.editType
   }
 }
 
@@ -72,6 +75,7 @@ function clearEdit(state) {
   return {
     ...state,
     edit: null,
+    editType: null,
   }
 }
 

@@ -4,31 +4,24 @@ import PropTypes from 'prop-types'
 import './FilterEntry.css'
 
 class FilterEntry extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = { editing: false }
-    this.onClickEdit = this.onClickEdit.bind(this)
-  }
-
   render() {
     return (
       <li className={`re-filter-entry ${this.props.active ? 'uk-active' : ''}`}>
-        {(this.props.updatable && !this.state.editing) && (
+        {(this.props.updatable && !this.props.edit) && (
           <div>
             <a
               className="re-more-icon uk-float-right uk-button"
               data-uk-icon="icon: more; ratio: .8" />
             <div className="uk-nav uk-dropdown-nav uk-padding-small" data-uk-dropdown="mode: click; pos: bottom-left">
               <ul className="uk-nav uk-nav-default">
-                <li><a onClick={this.onClickEdit}><span className="uk-link-icon" data-uk-icon="icon: pencil" /> Edit</a></li>
+                <li><a onClick={this.props.onStartEdit}><span className="uk-link-icon" data-uk-icon="icon: pencil" /> Edit</a></li>
                 <li><a onClick={this.props.onClickDelete}><span className="uk-link-icon" data-uk-icon="icon: trash" /> Delete</a></li>
               </ul>
             </div>
           </div>
         )}
-        {this.state.editing ? (
-          <form onSubmit={this.onClickEdit}>
+        {this.props.edit ? (
+          <form onSubmit={this.props.onFinishEdit}>
             <input
               type="text"
               className="uk-input uk-form-small"
@@ -47,10 +40,6 @@ class FilterEntry extends Component {
         )}
       </li>
     )
-  }
-
-  onClickEdit() {
-    this.setState({ editing: !this.state.editing })
   }
 }
 

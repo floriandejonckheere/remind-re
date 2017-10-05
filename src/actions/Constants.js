@@ -5,3 +5,6 @@ export const FILTER_NEXT_WEEK = 'FILTER_NEXT_WEEK'
 export const DATE_FILTER = 'DATE_FILTER'
 export const LABEL_FILTER = 'LABEL_FILTER'
 export const TEXT_FILTER = 'TEXT_FILTER'
+
+export const REMINDER_EDIT = 'REMINDER_EDIT'
+export const LABEL_EDIT = 'LABEL_EDIT'
