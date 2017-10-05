@@ -2,7 +2,7 @@ import labels from 'data/labels'
 import * as ActionTypes from 'actions/ActionTypes'
 
 const initialState = {
-  labelId: 1,
+  labelId: 2,
   labels: labels
 }
 

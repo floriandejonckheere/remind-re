@@ -4,7 +4,7 @@ import reminders from 'data/reminders'
 import * as ActionTypes from 'actions/ActionTypes'
 
 const initialState = {
-  reminderId: 3,
+  reminderId: 4,
   reminders: reminders
 }
 

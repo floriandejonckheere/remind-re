@@ -4,4 +4,7 @@ export default [{
 },{
   id: 1,
   title: 'ucn'
+},{
+  id: 2,
+  title: 'work'
 }]

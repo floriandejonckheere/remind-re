@@ -31,8 +31,8 @@ export default [{
 }, {
   id: 2,
   title: 'Pay bills',
-  due: moment().endOf('day').subtract(4, 'hours').unix() * 1000,
-  interval: null,
+  due: moment().endOf('month').subtract(4, 'hours').unix() * 1000,
+  interval: 2592000,
   labels: [0],
   alerts: [
     {
@@ -46,6 +46,18 @@ export default [{
   due: moment().add(1, 'day').startOf('day').add(8, 'hours').unix() * 1000,
   interval: null,
   labels: [0, 1],
+  alerts: [
+    {
+      time: 3600,
+      type: ['sms']
+    }
+  ]
+}, {
+  id: 4,
+  title: 'Finish report',
+  due: moment().add(1, 'week').startOf('day').add(16, 'hours').unix() * 1000,
+  interval: null,
+  labels: [2],
   alerts: [
     {
       time: 3600,

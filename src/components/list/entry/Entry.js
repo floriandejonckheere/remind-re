@@ -40,15 +40,15 @@ class Entry extends Component {
                 <div className="uk-margin">
                   <div className="uk-inline uk-width-1-1">
                     <a className="uk-form-icon uk-form-icon-flip" data-uk-icon="icon: question" />
-                    {this.state.validSchedule || (
-                      <a className="uk-form-icon uk-form-icon-flip re-warning-icon uk-text-danger" title="invalid schedule" data-uk-icon="icon: warning" data-uk-tooltip />
-                    )}
                     <div className="uk-text-small uk-width-auto" data-uk-dropdown="mode: click; boundary: .uk-inline">
                       <p>Write down the end time for your reminder. Examples:</p>
                       <p><em>in 30 minutes</em></p>
                       <p><em>next tuesday at 10am</em></p>
                       <p><em>two weeks from today</em></p>
                     </div>
+                    {this.state.validSchedule || (
+                      <a className="uk-form-icon uk-form-icon-flip re-warning-icon uk-text-danger" title="invalid schedule" data-uk-icon="icon: warning" data-uk-tooltip />
+                    )}
                     <input
                       type="text"
                       className="uk-input uk-form-small no-drag"
@@ -97,7 +97,7 @@ class Entry extends Component {
                 ) : (
                   <em className="uk-text-muted">Untitled reminder</em>
                 )}
-                {this.props.data.interval !== null &&
+                {this.props.data.interval !== null || this.props.data.interval !== undefined &&
                 <span className="uk-margin-left uk-text-muted" title="Recurring reminder" data-uk-icon="icon: future; ratio: .8" data-uk-tooltip />
                 }
               </div>

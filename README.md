@@ -43,10 +43,14 @@ The application does not have a backend. Data is stored in memory, a page refres
 
 ## What does not work
 
-- Alerts
 - Saving reminder schedule
 - Reordering partial lists (filtered results)
 
 ## What needs to be done
 
+- Alerts (email, sms, push)
 - HTML5 LocalStorage as Redux store 
+- Color-coded labels
+- Priority
+- Label organization
+- Accessibility
