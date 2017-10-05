@@ -33,12 +33,21 @@ class Entry extends Component {
                   />
                 </div>
                 <div className="uk-margin">
-                  <input
-                    type="text"
-                    className="uk-input uk-form-small"
-                    placeholder="Schedule"
-                    name="schedule"
-                  />
+                  <div className="uk-inline uk-width-1-1">
+                    <a className="uk-form-icon uk-form-icon-flip" data-uk-icon="icon: question" />
+                    <div className="uk-text-small uk-width-auto" data-uk-dropdown="mode: click; boundary: .uk-inline">
+                      <p>Write down the end time for your reminder. Examples:</p>
+                      <p><em>monday 8 october</em></p>
+                      <p><em>every wednesday at 8pm</em></p>
+                      <p><em>tomorrow morning</em></p>
+                    </div>
+                    <input
+                      type="text"
+                      className="uk-input uk-form-small"
+                      placeholder="Schedule"
+                      name="schedule"
+                    />
+                  </div>
                 </div>
 
                 <div className="uk-margin">
