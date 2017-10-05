@@ -46,7 +46,7 @@ class List extends Component {
             type="vertical"
           />
           {this.props.reminders.length === 0 && (
-            <li data-uk-alert>No reminders matched your query</li>
+            <div data-uk-alert>No reminders matched your query</div>
           )}
         </ul>
 
