@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import moment from 'moment'
 import PropTypes from 'prop-types'
+import Sugar from 'sugar'
 
 import LabelContainer from 'components/list/label/LabelContainer'
 
@@ -10,9 +11,15 @@ class Entry extends Component {
   constructor(props) {
     super(props)
 
-    this.state = { editing: false }
+    this.state = {
+      editing: false,
+      validSchedule: false,
+    }
+
+
     this.onClickEdit = this.onClickEdit.bind(this)
     this.onClickSubmit = this.onClickSubmit.bind(this)
+    this.onChangeSchedule = this.onChangeSchedule.bind(this)
   }
 
   render() {
@@ -35,17 +42,21 @@ class Entry extends Component {
                 <div className="uk-margin">
                   <div className="uk-inline uk-width-1-1">
                     <a className="uk-form-icon uk-form-icon-flip" data-uk-icon="icon: question" />
+                    {this.state.validSchedule || (
+                      <a className="uk-form-icon uk-form-icon-flip re-warning-icon uk-text-danger" title="invalid schedule" data-uk-icon="icon: warning" data-uk-tooltip />
+                    )}
                     <div className="uk-text-small uk-width-auto" data-uk-dropdown="mode: click; boundary: .uk-inline">
                       <p>Write down the end time for your reminder. Examples:</p>
-                      <p><em>monday 8 october</em></p>
-                      <p><em>every wednesday at 8pm</em></p>
-                      <p><em>tomorrow morning</em></p>
+                      <p><em>in 30 minutes</em></p>
+                      <p><em>next tuesday at 10am</em></p>
+                      <p><em>two weeks from today</em></p>
                     </div>
                     <input
                       type="text"
                       className="uk-input uk-form-small no-drag"
                       placeholder="Schedule"
                       name="schedule"
+                      onChange={this.onChangeSchedule}
                     />
                   </div>
                 </div>
@@ -144,6 +155,18 @@ class Entry extends Component {
 
     // Update entry
     this.props.onChange(e)
+  }
+
+  onChangeSchedule(e) {
+    let date = Sugar.Date.create(e.target.value)
+
+    console.log(date)
+
+    if (date == 'Invalid Date') {
+      this.setState({ validSchedule: false })
+    } else {
+      this.setState({ validSchedule: true })
+    }
   }
 }
 
