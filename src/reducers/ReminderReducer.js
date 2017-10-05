@@ -59,6 +59,23 @@ function updateReminder(state, action) {
 }
 
 /**
+ * Sort reminders
+ * @param state
+ * @param action
+ */
+function sortReminders(state, action) {
+  if (action.data.length !== state.reminders.length) {
+    console.log('cannot sort partial list')
+    return state
+  }
+console.log(action.data)
+  return {
+    ...state,
+    reminders: action.data.map(id => state.reminders.find(r => r.id === id))
+  }
+}
+
+/**
  * Remove a label
  * @param state
  * @param action
@@ -133,6 +150,8 @@ function ReminderReducer(state = initialState, action) {
       return deleteReminder(state, action)
     case ActionTypes.UPDATE_REMINDER:
       return updateReminder(state, action)
+    case ActionTypes.SORT_REMINDERS:
+      return sortReminders(state, action)
     case ActionTypes.DELETE_LABEL:
       return deleteLabel(state, action)
     case ActionTypes.ASSIGN_LABEL:

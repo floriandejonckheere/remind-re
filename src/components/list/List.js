@@ -10,7 +10,7 @@ class List extends Component {
   render() {
     let draggableReminders = this.props.reminders.map(r => {
       return {
-        content: <EntryContainer data={r} key={r} />,
+        content: <EntryContainer data={r} key={r.id} />,
       }
     })
 
@@ -41,7 +41,7 @@ class List extends Component {
         </strong>
         <ul className="uk-list uk-list-divider">
           <DragSortableList items={draggableReminders}
-            onSort={console.log}
+            onSort={this.props.onSort}
             dropBackTransitionDuration={0.3}
             type="vertical"
           />

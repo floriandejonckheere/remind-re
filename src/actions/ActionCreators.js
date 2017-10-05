@@ -26,6 +26,13 @@ export function updateReminder(id, data) {
   }
 }
 
+export function sortReminders(data) {
+  return {
+    type: ActionTypes.SORT_REMINDERS,
+    data,
+  }
+}
+
 export function assignLabel(id, labelId) {
   return {
     type: ActionTypes.ASSIGN_LABEL,
