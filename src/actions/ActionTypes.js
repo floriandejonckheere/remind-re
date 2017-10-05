@@ -17,3 +17,6 @@ export const CLEAR_SELECTION = 'CLEAR_SELECTION'
 
 export const SET_ALERT = 'SET_ALERT'
 export const CLEAR_ALERT = 'CLEAR_ALERT'
+
+export const SET_EDIT = 'SET_EDIT'
+export const CLEAR_EDIT = 'CLEAR_EDIT'

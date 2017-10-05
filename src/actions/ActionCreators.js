@@ -116,12 +116,25 @@ export function clearAlert(id) {
 export function setSelection(selection) {
   return {
     type: ActionTypes.SET_SELECTION,
-    selection: selection,
+    selection,
   }
 }
 
 export function clearSelection(selection) {
   return {
     type: ActionTypes.SET_SELECTION,
+  }
+}
+
+export function setEdit(id) {
+  return {
+    type: ActionTypes.SET_EDIT,
+    id,
+  }
+}
+
+export function clearEdit() {
+  return {
+    type: ActionTypes.SET_EDIT,
   }
 }

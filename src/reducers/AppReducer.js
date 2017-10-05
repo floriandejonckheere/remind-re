@@ -3,6 +3,7 @@ import * as ActionTypes from 'actions/ActionTypes'
 const initialState = {
   selection: [],
   alert: null,
+  edit: null,
 }
 
 /**
@@ -52,6 +53,29 @@ function clearAlert(state) {
 }
 
 /**
+ * Set edit
+ * @param state
+ * @param action
+ */
+function setEdit(state, action) {
+  return {
+    ...state,
+    edit: action.id,
+  }
+}
+
+/**
+ * Clear edit
+ * @param state
+ */
+function clearEdit(state) {
+  return {
+    ...state,
+    edit: null,
+  }
+}
+
+/**
  * App reducer
  * @param state
  * @param action
@@ -67,6 +91,10 @@ function AppReducer(state = initialState, action) {
       return setAlert(state, action)
     case ActionTypes.CLEAR_ALERT:
       return clearAlert(state)
+    case ActionTypes.SET_EDIT:
+      return setEdit(state, action)
+    case ActionTypes.CLEAR_EDIT:
+      return clearEdit(state)
     default:
       return state
   }
