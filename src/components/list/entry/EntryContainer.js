@@ -9,17 +9,26 @@ import {
     unassignLabel,
     setAlert,
     setFilter,
+    setEdit,
+    clearEdit,
   } from 'actions/ActionCreators'
 import Entry from 'components/list/entry/Entry'
 
 function mapStateToProps(state, ownProps) {
   return {
     labels: state.labels.labels,
+    edit: state.app.edit === ownProps.data.id,
   }
 }
 
 function mapDispatchToProps(dispatch, ownProps) {
   return {
+    onStartEdit: () => {
+      dispatch(setEdit(ownProps.data.id))
+    },
+    onFinishEdit: () => {
+      dispatch(clearEdit())
+    },
     onClickTrigger: () => {
       dispatch(setAlert(ownProps.data.id))
     },

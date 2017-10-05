@@ -12,23 +12,21 @@ class Entry extends Component {
     super(props)
 
     this.state = {
-      editing: false,
       validSchedule: false,
     }
 
-
-    this.onClickEdit = this.onClickEdit.bind(this)
-    this.onClickSubmit = this.onClickSubmit.bind(this)
+    this.onStartEdit = this.onStartEdit.bind(this)
+    this.onFinishEdit = this.onFinishEdit.bind(this)
     this.onChangeSchedule = this.onChangeSchedule.bind(this)
   }
 
   render() {
-    if (this.state.editing) {
+    if (this.props.edit) {
       return (
         <li className="re-reminder-entry uk-padding-small">
           <div className="uk-grid">
             <div className="uk-width-expand">
-              <form className="uk-margin-top" onSubmit={this.onClickSubmit}>
+              <form className="uk-margin-top" onSubmit={this.onFinishEdit}>
                 <div className="uk-margin">
                   <input
                     type="text"
@@ -120,7 +118,7 @@ class Entry extends Component {
                 <div className="uk-flex-right uk-hidden@m">
                   <ul className="uk-navbar-nav">
                     <li><a title="Trigger" data-uk-icon="icon: bell" data-uk-tooltip data-uk-toggle="target: #modal-full" onClick={this.props.onClickTrigger} /></li>
-                    <li><a title="Edit" data-uk-icon="icon: pencil" data-uk-tooltip onClick={this.onClickEdit} /></li>
+                    <li><a title="Edit" data-uk-icon="icon: pencil" data-uk-tooltip onClick={this.props.onStartEdit} /></li>
                     <li><a title="Delete" data-uk-icon="icon: close" data-uk-tooltip onClick={this.props.onClickDelete} /></li>
                   </ul>
                 </div>
@@ -134,7 +132,7 @@ class Entry extends Component {
               <div className="uk-nav uk-dropdown-nav uk-padding-small" data-uk-dropdown="mode: click; pos: bottom-left">
                 <ul className="uk-nav uk-nav-default">
                   <li><a onClick={this.props.onClickTrigger} data-uk-toggle="target: #modal-full"><span className="uk-link-icon" data-uk-icon="icon: bell" /> Trigger</a></li>
-                  <li><a onClick={this.onClickEdit}><span className="uk-link-icon" data-uk-icon="icon: pencil" /> Edit</a></li>
+                  <li><a onClick={this.onStartEdit}><span className="uk-link-icon" data-uk-icon="icon: pencil" /> Edit</a></li>
                   <li><a onClick={this.props.onClickDelete}><span className="uk-link-icon" data-uk-icon="icon: trash" /> Delete</a></li>
                 </ul>
               </div>
@@ -145,22 +143,18 @@ class Entry extends Component {
     }
   }
 
-  onClickEdit() {
-    this.setState({ editing: !this.state.editing })
+  onStartEdit() {
+    this.props.onStartEdit()
   }
 
-  onClickSubmit(e) {
-    // Hide form
-    this.onClickEdit()
-
-    // Update entry
+  onFinishEdit(e) {
+    e.preventDefault()
+    this.props.onFinishEdit()
     this.props.onChange(e)
   }
 
   onChangeSchedule(e) {
     let date = Sugar.Date.create(e.target.value)
-
-    console.log(date)
 
     if (date == 'Invalid Date') {
       this.setState({ validSchedule: false })

@@ -2,7 +2,11 @@ import { connect } from 'react-redux'
 import moment from 'moment'
 
 import * as Constants from 'actions/Constants'
-import { clearFilter, createReminder, sortReminders } from 'actions/ActionCreators'
+import {
+  clearFilter,
+  createReminder,
+  sortReminders,
+} from 'actions/ActionCreators'
 import List from 'components/list/List'
 
 function filterByDate(list, filter) {
