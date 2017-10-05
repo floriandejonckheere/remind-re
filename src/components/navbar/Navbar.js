@@ -22,7 +22,6 @@ class Navbar extends Component {
           </div>
           <div className="uk-navbar-item re-navbar-item uk-width-1-3@l uk-width-1-2@m uk-width-3-4 uk-visible@s">
             <SearchbarContainer />
-            <SettingsContainer />
           </div>
         </div>
 
