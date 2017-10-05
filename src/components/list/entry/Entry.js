@@ -17,7 +17,7 @@ class Entry extends Component {
 
     this.onStartEdit = this.onStartEdit.bind(this)
     this.onFinishEdit = this.onFinishEdit.bind(this)
-    this.onChangeSchedule = this.onChangeSchedule.bind(this)
+    this.onUpdateSchedule = this.onUpdateSchedule.bind(this)
   }
 
   render() {
@@ -54,7 +54,7 @@ class Entry extends Component {
                       className="uk-input uk-form-small no-drag"
                       placeholder="Schedule"
                       name="schedule"
-                      onChange={this.onChangeSchedule}
+                      onChange={this.onUpdateSchedule}
                     />
                   </div>
                 </div>
@@ -71,7 +71,7 @@ class Entry extends Component {
                       id={l.id}
                       key={l.id}
                       active={this.props.data.labels.includes(l.id)}
-                      onClick={this.props.onChangeLabel}
+                      onClick={this.props.onLabel}
                     />
                   ))}
                 </div>
@@ -110,16 +110,16 @@ class Entry extends Component {
                         id={id}
                         key={id}
                         active="true"
-                        onClick={this.props.onClickLabel}
+                        onClick={this.props.onFilterLabel}
                       />
                     ))}
                   </p>
                 </div>
                 <div className="uk-flex-right uk-hidden@m">
                   <ul className="uk-navbar-nav">
-                    <li><a title="Trigger" data-uk-icon="icon: bell" data-uk-tooltip data-uk-toggle="target: #modal-full" onClick={this.props.onClickTrigger} /></li>
+                    <li><a title="Trigger" data-uk-icon="icon: bell" data-uk-tooltip data-uk-toggle="target: #modal-full" onClick={this.props.onTrigger} /></li>
                     <li><a title="Edit" data-uk-icon="icon: pencil" data-uk-tooltip onClick={this.props.onStartEdit} /></li>
-                    <li><a title="Delete" data-uk-icon="icon: close" data-uk-tooltip onClick={this.props.onClickDelete} /></li>
+                    <li><a title="Delete" data-uk-icon="icon: close" data-uk-tooltip onClick={this.props.onDelete} /></li>
                   </ul>
                 </div>
               </div>
@@ -131,9 +131,9 @@ class Entry extends Component {
               />
               <div className="uk-nav uk-dropdown-nav uk-padding-small" data-uk-dropdown="mode: click; pos: bottom-left">
                 <ul className="uk-nav uk-nav-default">
-                  <li><a onClick={this.props.onClickTrigger} data-uk-toggle="target: #modal-full"><span className="uk-link-icon" data-uk-icon="icon: bell" /> Trigger</a></li>
+                  <li><a onClick={this.props.onTrigger} data-uk-toggle="target: #modal-full"><span className="uk-link-icon" data-uk-icon="icon: bell" /> Trigger</a></li>
                   <li><a onClick={this.onStartEdit}><span className="uk-link-icon" data-uk-icon="icon: pencil" /> Edit</a></li>
-                  <li><a onClick={this.props.onClickDelete}><span className="uk-link-icon" data-uk-icon="icon: trash" /> Delete</a></li>
+                  <li><a onClick={this.props.onDelete}><span className="uk-link-icon" data-uk-icon="icon: trash" /> Delete</a></li>
                 </ul>
               </div>
             </div>
@@ -150,10 +150,10 @@ class Entry extends Component {
   onFinishEdit(e) {
     e.preventDefault()
     this.props.onFinishEdit()
-    this.props.onChange(e)
+    this.props.onUpdate(e)
   }
 
-  onChangeSchedule(e) {
+  onUpdateSchedule(e) {
     let date = Sugar.Date.create(e.target.value)
 
     if (date == 'Invalid Date') {
@@ -177,11 +177,11 @@ Entry.propTypes = {
 
   onStartEdit: PropTypes.func.isRequired,
   onFinishEdit: PropTypes.func.isRequired,
-  onClickTrigger: PropTypes.func.isRequired,
-  onClickDelete: PropTypes.func.isRequired,
-  onClickLabel: PropTypes.func.isRequired,
-  onChange: PropTypes.func.isRequired,
-  onChangeLabel: PropTypes.func.isRequired,
+  onTrigger: PropTypes.func.isRequired,
+  onDelete: PropTypes.func.isRequired,
+  onFilterLabel: PropTypes.func.isRequired,
+  onUpdate: PropTypes.func.isRequired,
+  onLabel: PropTypes.func.isRequired,
 }
 
 export default Entry

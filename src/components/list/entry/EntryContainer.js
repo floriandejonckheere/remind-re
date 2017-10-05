@@ -29,21 +29,21 @@ function mapDispatchToProps(dispatch, ownProps) {
     onFinishEdit: () => {
       dispatch(clearEdit())
     },
-    onClickTrigger: () => {
+    onTrigger: () => {
       dispatch(setAlert(ownProps.data.id))
     },
-    onClickDelete: () => {
+    onDelete: () => {
       dispatch(deleteReminder(ownProps.data.id))
     },
-    onClickLabel: (id) => {
+    onFilterLabel: (id) => {
       dispatch(setFilter(Constants.LABEL_FILTER, id))
     },
-    onChange: (e) => {
+    onUpdate: (e) => {
       dispatch(updateReminder(ownProps.data.id, {
         title: e.target.elements[0].value,
       }))
     },
-    onChangeLabel: (labelId) => {
+    onLabel: (labelId) => {
       if (ownProps.data.labels.includes(labelId)) {
         dispatch(unassignLabel(ownProps.data.id, labelId))
       } else dispatch(assignLabel(ownProps.data.id, labelId))
