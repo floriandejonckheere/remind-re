@@ -38,10 +38,8 @@ function mapDispatchToProps(dispatch, ownProps) {
     onFilterLabel: (id) => {
       dispatch(setFilter(Constants.LABEL_FILTER, id))
     },
-    onUpdate: (e) => {
-      dispatch(updateReminder(ownProps.data.id, {
-        title: e.target.elements[0].value,
-      }))
+    onUpdate: (data) => {
+      dispatch(updateReminder(ownProps.data.id, data))
     },
     onLabel: (labelId) => {
       if (ownProps.data.labels.includes(labelId)) {

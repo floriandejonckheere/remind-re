@@ -150,7 +150,7 @@ class Entry extends Component {
   onFinishEdit(e) {
     e.preventDefault()
     this.props.onFinishEdit()
-    this.props.onUpdate(e)
+    this.props.onUpdate({ title: e.target.value })
   }
 
   onUpdateSchedule(e) {
