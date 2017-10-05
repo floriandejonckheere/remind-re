@@ -19,13 +19,19 @@ class Entry extends Component {
     return (
       <li className="re-reminder-entry uk-padding-small">
         <div className="uk-grid">
+          <div className="uk-padding-remove">
+            <a
+              className="re-hover-icon re-drag-icon uk-float-right uk-button uk-padding-remove-right"
+              data-uk-icon="icon: menu"
+            />
+          </div>
           <div className="uk-width-expand">
             {this.state.editing ? (
               <form className="uk-margin-top" onSubmit={this.onClickSubmit}>
                 <div className="uk-margin">
                   <input
                     type="text"
-                    className="uk-input"
+                    className="uk-input no-drag"
                     placeholder="Reminder name"
                     name="title"
                     defaultValue={this.props.data.title}
@@ -43,7 +49,7 @@ class Entry extends Component {
                     </div>
                     <input
                       type="text"
-                      className="uk-input uk-form-small"
+                      className="uk-input uk-form-small no-drag"
                       placeholder="Schedule"
                       name="schedule"
                     />
@@ -54,7 +60,7 @@ class Entry extends Component {
                   <input
                     type="submit"
                     value="save"
-                    className="uk-button uk-button-small uk-button-default uk-float-right"
+                    className="uk-button uk-button-small uk-button-default uk-float-right no-drag"
                   />
 
                   {this.props.labels.map(l => (
@@ -69,7 +75,7 @@ class Entry extends Component {
               </form>
             ) : (
               <div>
-                <div className="uk-text-lead uk-text-truncate">
+                <div className="uk-text-lead uk-text-truncate no-drag">
                   {this.props.data.title ? (
                     this.props.data.title
                   ) : (
@@ -81,7 +87,7 @@ class Entry extends Component {
                 </div>
                 <div className="uk-grid uk-flex uk-flex-between">
                   <div className="uk-flex uk-flex-middle">
-                    <p className="uk-text-meta uk-margin-remove-top">
+                    <p className="uk-text-meta uk-margin-remove-top no-drag">
                       {moment(this.props.data.due).fromNow()}
                       {this.props.data.labels.map(id => (
                         <LabelContainer
@@ -107,7 +113,7 @@ class Entry extends Component {
           {this.state.editing || (
             <div className="uk-flex uk-flex-middle uk-visible@m">
               <a
-                className="re-more-icon uk-float-right uk-button"
+                className="re-hover-icon uk-float-right uk-button"
                 data-uk-icon="icon: more; ratio: .8" />
               <div className="uk-nav uk-dropdown-nav uk-padding-small" data-uk-dropdown="mode: click; pos: bottom-left">
                 <ul className="uk-nav uk-nav-default">

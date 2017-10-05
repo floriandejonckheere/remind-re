@@ -1,4 +1,18 @@
 .re-reminder-entry {
-  .re-more-icon { opacity: 0; }
-  &:hover .re-more-icon { opacity: 1; }
+  .re-hover-icon { opacity: 0; }
+  &:hover .re-hover-icon { opacity: 1; }
+
+  .re-drag-icon { cursor: grab; }
+}
+
+/* react-drag-sortable style */
+
+.placeholder {
+  opacity: .2;
+}
+
+.dragged {
+  /* dragged items need a width */
+  width: 550px;
+  background-color: rgba(0, 0, 0, .07);
 }

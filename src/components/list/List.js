@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import DragSortableList from 'react-drag-sortable'
 
 import EntryContainer from 'components/list/entry/EntryContainer'
 
@@ -7,6 +8,12 @@ import './List.css'
 
 class List extends Component {
   render() {
+    let draggableReminders = this.props.reminders.map(r => {
+      return {
+        content: <EntryContainer data={r} key={r} />,
+      }
+    })
+
     return (
       <div className="re-reminder-list uk-padding uk-height-1-1" data-uk-height-viewport="expand: true">
         <div className="uk-float-right">
@@ -33,12 +40,11 @@ class List extends Component {
           )}
         </strong>
         <ul className="uk-list uk-list-divider">
-          {this.props.reminders.map(reminder => (
-            <EntryContainer
-              data={reminder}
-              key={reminder.id}
-            />
-          ))}
+          <DragSortableList items={draggableReminders}
+            onSort={console.log}
+            dropBackTransitionDuration={0.3}
+            type="vertical"
+          />
           {this.props.reminders.length === 0 && (
             <li data-uk-alert>No reminders matched your query</li>
           )}

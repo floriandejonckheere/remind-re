@@ -3,7 +3,12 @@ import { connect } from 'react-redux'
 import * as Constants from 'actions/Constants'
 
 import {
-    updateReminder, deleteReminder, assignLabel, unassignLabel, setAlert, setFilter
+    updateReminder,
+    deleteReminder,
+    assignLabel,
+    unassignLabel,
+    setAlert,
+    setFilter,
   } from 'actions/ActionCreators'
 import Entry from 'components/list/entry/Entry'
 

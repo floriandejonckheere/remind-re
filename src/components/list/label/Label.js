@@ -9,7 +9,7 @@ class Label extends Component {
       <a
         className="uk-margin"
         onClick={() => this.props.onClick(this.props.id)}>
-        <span className={`re-label uk-label ${this.props.active ? 'uk-background-secondary' : 'uk-background-muted'} uk-margin-small-left`}>{this.props.data.title}</span>
+        <span className={`re-label uk-label ${this.props.active ? 'uk-background-secondary' : 'uk-background-muted'} uk-margin-small-left no-drag`}>{this.props.data.title}</span>
       </a>
     )
   }

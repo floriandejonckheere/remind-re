@@ -49,6 +49,7 @@
     "react": "^16.0.0-rc.3",
     "react-dev-utils": "^4.0.1",
     "react-dom": "^16.0.0-rc.3",
+    "react-drag-sortable": "^1.0.5",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "react-web-notifications": "^0.1.3",
